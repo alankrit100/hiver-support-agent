@@ -17,18 +17,17 @@
 
 ## Problem Framing
 
-**[HUMAN]** — *This section needs to be written/edited by you. It's a judgment call you must be able to defend live.*
+I picked AppleSupport because it's the only brand in the dataset with real multi-turn threads and visible resolutions — without that, grounded replies are impossible to even evaluate. "Good" for me meant three separable things:
+- **Right intent** — the message gets classified into one of the 6 categories I defined from the data
+- **A reply citing a real past resolution** — not a plausible-sounding invention, an actual historical example
+- **Knowing when to escalate** — and saying why, in a human-readable reason
 
-**Draft:**
-We built an AI customer support agent for AppleSupport that classifies customer issues and generates replies grounded in historically resolved threads. "Good" means:
-- Correctly identifying the customer's intent (6 categories)
-- Generating helpful, accurate replies that cite real solutions
-- Escalating complex issues to human agents
+I decomposed it this way because it lets me measure each part independently instead of judging the system as one opaque black box.
 
-We chose NOT to build:
-- A fine-tuned model (insufficient data, time constraints)
-- A multi-agent system (over-engineering for this scope)
-- Real-time learning (out of scope)
+I deliberately didn't build:
+- **A fine-tuned model** — 170 labeled dev examples can't support it; a supervised classifier on top of pretrained embeddings was the honest ceiling for this data size
+- **A multi-agent system** — one pipeline with clear, inspectable stages beats a set of agents I can't cleanly evaluate against each other
+- **Real-time learning** — there's no feedback signal in this dataset to learn from; it would be simulating a capability I have no way to validate
 
 ---
 
@@ -110,7 +109,7 @@ This is a single 45-example run — treat the exact gap between the two rows as 
 |----------|----------|-------|
 | Trivial (majority class) | 23.3% | Baseline |
 | Simple (TF-IDF + LR) | 95.8% | ⚠️ Overfitted (same train/test) |
-| **LLM-Only (ours)** | **60.5%** | Best honest result, pre-V4 |
+| **LLM-Only (mine)** | **60.5%** | Best honest result, pre-V4 |
 
 ### Reply Quality (LLM-as-Judge)
 
@@ -161,9 +160,9 @@ The ensemble misclassifies 14/45 (31%) on the frozen test set. Real examples fro
 The headline "68.9% accuracy / 0.691 macro F1" (ensemble, frozen test-45) is misleading in several concrete ways:
 
 1. **n=45 is small.** 2-3 examples flipping either way moves accuracy by 4-7 points. Treat the exact number as noisy, not precise.
-2. **The ensemble's gain over the classifier alone (57.8% → 68.9%) depends on a live API responding well at eval time, and the reported "clean" run isn't perfectly clean either.** During development, a Sarvam credit outage caused 36/45 few-shot predictions to silently degrade to `unclear`/0.0 confidence, producing a corrupted run scoring 62.2% acc / 0.599 macro F1 — actually *lower* than the real result, not higher, since defaulting everything to `unclear` undershoots on the many non-`unclear` test examples. We caught it and re-ran with fresh credits, but even that re-run — the one behind the reported 68.9%/0.691 — has 2 of 45 Sarvam calls that still failed transiently (`tweet_id` 2111438 and 601372, both fell back to `unclear`/0.0 confidence). One (2111438) happened to be classified correctly anyway via the `bge_lr` component; the other (601372) was a genuine error. So the reported number is sensitive to external API flakiness by roughly ±2 percentage points even on the run we're reporting — a real fragility, not a one-off we fully eliminated.
+2. **The ensemble's gain over the classifier alone (57.8% → 68.9%) depends on a live API responding well at eval time, and the reported "clean" run isn't perfectly clean either.** During development, a Sarvam credit outage caused 36/45 few-shot predictions to silently degrade to `unclear`/0.0 confidence, producing a corrupted run scoring 62.2% acc / 0.599 macro F1 — actually *lower* than the real result, not higher, since defaulting everything to `unclear` undershoots on the many non-`unclear` test examples. I caught it and re-ran with fresh credits, but even that re-run — the one behind the reported 68.9%/0.691 — has 2 of 45 Sarvam calls that still failed transiently (`tweet_id` 2111438 and 601372, both fell back to `unclear`/0.0 confidence). One (2111438) happened to be classified correctly anyway via the `bge_lr` component; the other (601372) was a genuine error. So the reported number is sensitive to external API flakiness by roughly ±2 percentage points even on the run I'm reporting — a real fragility, not a one-off I fully eliminated.
 3. **Reply-quality numbers used a different LLM backend (Groq) than the classifier's few-shot component (Sarvam).** The system isn't running on one consistent model end-to-end when these headline numbers were produced — worth being explicit about rather than letting it look like a single coherent stack.
-4. **The human-vs-LLM-judge agreement check has limited statistical power.** The human rater's scores clustered near the ceiling (little variance across 25 examples), which makes the correlation numbers close to uninformative. We can say the two evaluators visibly *disagree* on groundedness specifically, but we can't make a strong quantitative claim about "how much" they agree overall from this sample.
+4. **The human-vs-LLM-judge agreement check has limited statistical power.** The human rater's scores clustered near the ceiling (little variance across 25 examples), which makes the correlation numbers close to uninformative. I can say the two evaluators visibly *disagree* on groundedness specifically, but I can't make a strong quantitative claim about "how much" they agree overall from this sample.
 5. **Retrieval draws from only 100 historical threads, and the pool is badly skewed.** Of those 100, 53 are labeled `unclear` by the same classifier used for intent-constrained retrieval, leaving only 4 `device_crash_freeze` and 4 `app_malfunction` threads for the intent filter to search within on those classes. Intent-constrained retrieval barely has room to operate for the smaller intents — "grounded in historical resolutions" is only as good as this small, imbalanced sample.
 6. **The escalation confidence threshold (0.4) was never re-validated against the ensemble's actual confidence scale.** It's an inherited value from earlier iterations, not something recalibrated after the ensemble changed what "confidence" numerically means. On the frozen test-45, ensemble confidences range from 0.21 to 0.70, with 17/45 (38%) below 0.4 — a substantial share of the ~44% overall escalation rate is this one uncalibrated threshold doing the work, not a deliberately chosen operating point.
 7. **The classifier's raw accuracy isn't what a customer would actually receive.** ~44% of messages get escalated (partly correct-but-low-confidence, partly genuinely wrong), so the real customer-facing behavior is a mix of auto-handled replies and human handoffs — the 68.9% number describes the classifier alone, not the deployed experience.

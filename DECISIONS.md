@@ -64,7 +64,7 @@ Non-obvious decisions with one-line rationale.
 
 17. **Ensembled bge_lr with the Sarvam few-shot classifier (weighted vote)** — the two are trained/prompted completely differently and don't make the same mistakes; a blend was cheap to try and had a clear evaluation protocol already in place. See `src/ensemble_classifier.py`, `scripts/run_v4_ensemble_cv.py`, `scripts/run_v4_ensemble_final.py`.
 
-18. **Sarvam's single prediction is converted to a pseudo-distribution, not a real probability** — Sarvam only outputs one intent + a self-reported confidence, not per-class probabilities. We put `confidence` mass on the predicted label and split the rest uniformly over the other 5. This is a heuristic (documented in `ensemble_classifier.py`), not a calibrated distribution — don't over-interpret the blended "confidence" as a true probability.
+18. **Sarvam's single prediction is converted to a pseudo-distribution, not a real probability** — Sarvam only outputs one intent + a self-reported confidence, not per-class probabilities. I put `confidence` mass on the predicted label and split the rest uniformly over the other 5. This is a heuristic (documented in `ensemble_classifier.py`), not a calibrated distribution — don't over-interpret the blended "confidence" as a true probability.
 
 19. **Blend weight (weight_bge=0.8) selected by 5-fold CV on dev-170 only** — same leakage discipline as the original V4 classifier selection; the frozen 45-example test set was never touched during weight selection, only for the final one-shot evaluation.
 
