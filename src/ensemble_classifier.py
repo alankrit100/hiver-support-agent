@@ -104,8 +104,8 @@ class LiveEnsembleClassifier:
     def _fit_bge_lr():
         if not DEV_EMB_PATH.exists() or not DEV_IDS_PATH.exists():
             raise RuntimeError(
-                f"Missing cached BGE-M3 dev embeddings. Run first:\n"
-                f"    python scripts/run_v4_cv.py"
+                "Missing cached BGE-M3 dev embeddings. Run first:\n"
+                "    python scripts/run_v4_cv.py"
             )
         dev = []
         with open(TRAIN_PATH) as f:

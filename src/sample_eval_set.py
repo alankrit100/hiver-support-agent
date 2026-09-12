@@ -8,8 +8,6 @@ Usage:
 
 import argparse
 import json
-import re
-import sys
 from pathlib import Path
 
 import pandas as pd
@@ -173,7 +171,7 @@ def sample_eval_set(
 
     # Count per intent
     intent_counts = customer_msgs["detected_intent"].value_counts()
-    print(f"[SAMPLE] Intent distribution:")
+    print("[SAMPLE] Intent distribution:")
     for intent, count in intent_counts.items():
         print(f"  {intent}: {count}")
 
@@ -280,10 +278,10 @@ def build_eval_candidates(df: pd.DataFrame, sampled: list, output_path: str):
         if c["edge_cases"]:
             edge_count += 1
 
-    print(f"\n[SAMPLE] Summary:")
+    print("\n[SAMPLE] Summary:")
     print(f"  Total: {len(candidates)}")
     print(f"  Edge cases: {edge_count}")
-    print(f"  Intent distribution:")
+    print("  Intent distribution:")
     for intent, count in sorted(intents.items()):
         print(f"    {intent}: {count}")
 

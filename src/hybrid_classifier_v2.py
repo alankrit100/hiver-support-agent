@@ -19,7 +19,6 @@ import json
 import os
 import pickle
 from pathlib import Path
-from collections import Counter
 
 import faiss
 import numpy as np

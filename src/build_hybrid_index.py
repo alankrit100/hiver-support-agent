@@ -62,10 +62,9 @@ def build_index(
     model = SentenceTransformer(model_name)
     print(f"[BUILD] Model loaded (dimension: {model.get_sentence_embedding_dimension()})")
     
-    # Extract texts and labels
+    # Extract texts
     texts = [item["text"] for item in training_data]
-    labels = [item["labeled_intent"] for item in training_data]
-    
+
     # Encode texts
     print(f"[BUILD] Encoding {len(texts)} messages...")
     embeddings = model.encode(
@@ -78,7 +77,7 @@ def build_index(
     print(f"[BUILD] Embeddings shape: {embeddings.shape}")
     
     # Build FAISS index
-    print(f"[BUILD] Building FAISS index...")
+    print("[BUILD] Building FAISS index...")
     dimension = embeddings.shape[1]
     
     # Use IndexFlatIP for inner product (cosine similarity with normalized vectors)
@@ -156,7 +155,7 @@ def main():
     faiss_path = f"{args.index_path}.faiss"
     if os.path.exists(faiss_path) and not args.force:
         print(f"[BUILD] Index already exists at {faiss_path}")
-        print(f"[BUILD] Use --force to rebuild")
+        print("[BUILD] Use --force to rebuild")
         return
     
     # Build index

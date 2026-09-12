@@ -16,7 +16,6 @@ from collections import defaultdict
 from rich.console import Console
 from rich.table import Table
 from rich.panel import Panel
-from rich.progress import Progress, SpinnerColumn, TextColumn, BarColumn
 
 console = Console()
 
@@ -48,7 +47,7 @@ def evaluate_classifier(classifier, test_set: list, intents: list) -> dict:
             pred_intent = result["intent"]
             method = result.get("method", "unknown")
             method_counts[method] += 1
-        except Exception as e:
+        except Exception:
             pred_intent = "unclear"
             method = "error"
         
@@ -241,7 +240,7 @@ def main():
     results = run_tuning(test_set, intents, quick=args.quick)
     
     # Display results
-    sorted_results = display_results(results)
+    display_results(results)
     
     # Save results
     with open(args.output, "w") as f:

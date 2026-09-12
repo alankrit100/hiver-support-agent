@@ -211,7 +211,7 @@ def main() -> None:
     fig.savefig(CM_PNG_PATH, dpi=150)
 
     print("\n" + "=" * 70)
-    print(f"ENSEMBLE FINAL (fit dev-170 -> frozen test-45, run once)")
+    print("ENSEMBLE FINAL (fit dev-170 -> frozen test-45, run once)")
     print(f"accuracy={acc:.3f} ({correct}/45)  macroF1={macro_f1:.3f}")
     if bge_only:
         print(f"vs bge_lr alone: accuracy={bge_only['accuracy']:.3f} "

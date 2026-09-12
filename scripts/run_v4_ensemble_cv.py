@@ -87,8 +87,8 @@ def main() -> None:
         )
     if not EMB_PATH.exists() or not EMB_IDS_PATH.exists():
         sys.exit(
-            f"Missing cached BGE-M3 dev embeddings. Run first:\n"
-            f"    python scripts/run_v4_cv.py"
+            "Missing cached BGE-M3 dev embeddings. Run first:\n"
+            "    python scripts/run_v4_cv.py"
         )
 
     dev = load_dev()

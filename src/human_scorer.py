@@ -15,8 +15,7 @@ from pathlib import Path
 from rich.console import Console
 from rich.table import Table
 from rich.panel import Panel
-from rich.text import Text
-from rich.prompt import IntPrompt, Prompt
+from rich.prompt import Prompt
 from rich.markdown import Markdown
 
 console = Console()
@@ -190,7 +189,7 @@ def display_agreement(agreement: dict):
     # Cohen's Kappa approximation
     overall = agreement.get("overall", {})
     if overall:
-        console.print(f"\n[bold]Overall Agreement:[/]")
+        console.print("\n[bold]Overall Agreement:[/]")
         console.print(f"  Exact Match: {overall['exact_match']}%")
         console.print(f"  Within 1 Point: {overall['within_one']}%")
         console.print(f"  Correlation: {overall['correlation']:.3f}")

@@ -165,7 +165,7 @@ def main() -> None:
     fig.savefig(CM_PNG_PATH, dpi=150)
 
     print("\n" + "=" * 70)
-    print(f"V4 FINAL (fit dev-170 -> frozen test-45, run once)")
+    print("V4 FINAL (fit dev-170 -> frozen test-45, run once)")
     print(f"accuracy={acc:.3f} ({correct}/45)  macroF1={macro_f1:.3f}")
     for label in LABELS:
         d = report["per_intent"][label]

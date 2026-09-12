@@ -221,14 +221,3 @@ python src/baselines.py
 - `data/eval_results.json` - Full evaluation results
 - `reports/v4_final_results.json` / `reports/v4_ensemble_final_results.json` - V4 headline numbers
 
----
-
-## Assignment Deliverables Checklist
-
-- [x] README.md
-- [x] Runnable pipeline code
-- [x] golden_eval_set.jsonl (human-labeled)
-- [x] Evaluation harness code + results
-- [x] Report (this document)
-- [ ] DECISIONS.md (in progress)
-- [x] All code committed

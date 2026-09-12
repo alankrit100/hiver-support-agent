@@ -8,7 +8,6 @@ The LLM (Sarvam 105B) handles all classification decisions.
 """
 
 import json
-import os
 from pathlib import Path
 
 from llm_client import LLMClient

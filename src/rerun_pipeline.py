@@ -6,7 +6,6 @@ Generates new replies using the updated prompt with citation enforcement.
 import json
 import time
 from pathlib import Path
-from concurrent.futures import ThreadPoolExecutor, TimeoutError
 
 from rich.console import Console
 from rich.table import Table

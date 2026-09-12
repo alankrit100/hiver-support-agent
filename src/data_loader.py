@@ -3,7 +3,6 @@
 Handles downloading the Kaggle dataset and loading it into pandas DataFrames.
 """
 
-import os
 import hashlib
 import pandas as pd
 import kagglehub

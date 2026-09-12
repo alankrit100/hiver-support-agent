@@ -5,7 +5,6 @@ using the approved intent definitions from intent_definitions.json.
 """
 
 import json
-import os
 from pathlib import Path
 
 from llm_client import LLMClient

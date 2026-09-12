@@ -64,7 +64,7 @@ class RetrievalModule:
         apple_brand = df[df["author_id"] == "AppleSupport"]
         apple_response_ids = set(apple_brand["tweet_id"].values)
 
-        print(f"[RETRIEVAL] Finding resolved threads...")
+        print("[RETRIEVAL] Finding resolved threads...")
 
         # Find resolved threads based on heuristics
         resolved_threads = self._find_resolved_threads(df, apple_response_ids)
@@ -78,13 +78,13 @@ class RetrievalModule:
         print(f"[RETRIEVAL] Found {len(self.threads)} resolved threads")
 
         # Create embeddings
-        print(f"[RETRIEVAL] Creating embeddings...")
+        print("[RETRIEVAL] Creating embeddings...")
         thread_texts = [t["customer_query"] for t in self.threads]
         embeddings = self.model.encode(thread_texts, show_progress_bar=True)
         embeddings = np.array(embeddings, dtype=np.float32)
 
         # Build FAISS index
-        print(f"[RETRIEVAL] Building FAISS index...")
+        print("[RETRIEVAL] Building FAISS index...")
         dimension = embeddings.shape[1]
         self.index = faiss.IndexFlatL2(dimension)
         self.index.add(embeddings)

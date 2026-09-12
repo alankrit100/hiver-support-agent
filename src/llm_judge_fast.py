@@ -12,7 +12,6 @@ import os
 import time
 import re
 from pathlib import Path
-from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor, TimeoutError
 
 from rich.console import Console
@@ -177,8 +176,7 @@ def display_results(scores: list, stats: dict):
 
 def main():
     import argparse
-    import os
-    
+
     parser = argparse.ArgumentParser(description="Fast LLM-as-Judge")
     parser.add_argument("--resume", action="store_true", help="Resume from checkpoint")
     parser.add_argument("--sample", default=str(Path(__file__).parent.parent / "data" / "judge_sample.json"))

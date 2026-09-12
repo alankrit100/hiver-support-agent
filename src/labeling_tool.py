@@ -14,14 +14,11 @@ import argparse
 import json
 import os
 import sys
-import time
 from datetime import datetime, timezone
 from pathlib import Path
 
 from rich.console import Console
 from rich.panel import Panel
-from rich.table import Table
-from rich.text import Text
 
 console = Console()
 
@@ -311,7 +308,7 @@ def run_labeling_tool(args):
         i += 1
 
     # Final summary
-    console.print(f"\n[bold]Session complete:[/]")
+    console.print("\n[bold]Session complete:[/]")
     console.print(f"  Labeled: {labeled}")
     console.print(f"  Skipped: {skipped}")
     console.print(f"  Output: {args.output}")

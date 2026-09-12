@@ -17,12 +17,10 @@ import argparse
 import json
 import os
 import sys
-import time
 from pathlib import Path
 from collections import defaultdict
-from typing import Dict, List, Tuple
+from typing import Dict, List
 
-import numpy as np
 from rich.console import Console
 from rich.table import Table
 from rich.panel import Panel
