@@ -96,6 +96,19 @@ This is a single 45-example run — treat the exact gap between the two rows as 
 
 I also hand-scored the same 25 replies myself, blind to the LLM judge's scores, to check whether the judge can be trusted (`data/human_vs_llm_agreement.json`). Short version: my scores clustered near the top of the scale (mostly 4-5) while the judge was much stricter, especially on groundedness (judge mean 1.88 vs. my mean ~4.8) — the two of us don't agree on what "grounded enough" means. Full reasoning in [What is Misleading About My Headline Number?](#what-is-misleading-about-my-headline-number).
 
+### V4 Escalation Performance
+
+Measured against the same frozen 45-example test set, on the current escalation rules (evidence-strength + no-resolution + conflicting-resolution checks, on top of the keyword rules — see `DECISIONS.md` #21, #25). This replaces the pre-rewrite number in the V1-V3 table below, which no longer reflects the current code. Full results: `reports/v4_escalation_results.json`.
+
+| Metric | Value |
+|--------|-------|
+| Precision | 75.9% |
+| Recall | 68.8% |
+| F1 | 72.1% |
+| Missed escalations (false negatives) | 10/45 |
+
+Recall jumped from 48.4% (old rules) to 68.8% without hurting precision — the new evidence-based rules catch real escalation-worthy cases the old keyword-only rules missed. Still, 10 of 45 messages that should have been escalated weren't. Missed escalations are worse than unnecessary ones (a customer gets a bad automated answer instead of a slightly-too-cautious handoff), so this is the number to keep pushing down, not the precision number.
+
 ---
 
 ## V1-V3 Results (historical, superseded by V4 above)

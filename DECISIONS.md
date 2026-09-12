@@ -78,6 +78,8 @@ Non-obvious decisions with one-line rationale.
 
 24. **Pinned `scripts/run_v4_cv.py` and `scripts/run_v4_ensemble_final.py` to `provider="sarvam"` explicitly** — after adding `GROQ_API_KEY`, `LLMClient()`'s auto-detect would silently switch these frozen, already-reported baseline/ensemble numbers to Groq on any re-run, breaking reproducibility of the 68.9%/0.691 result. Fixed by constructing `LLMClient(provider="sarvam")` explicitly at those two call sites only; the production pipeline (`ensemble_classifier.py`) is left on auto-detect since it should prefer the more reliable backend.
 
+25. **Measured current escalation precision/recall against `test_set.jsonl` (the frozen 45), not the full 215-example golden set** — `golden_eval_set.jsonl` includes the 170 examples used to train `bge_lr`, so sampling from it risks the classifier looking artificially confident/accurate on its own training data, which would bias the escalation numbers. `test_set.jsonl` is already disjoint from training by construction. Result: precision 75.9%, recall 68.8%, F1 72.1% (vs. 76.0%/48.4%/59.1% pre-rewrite) — recall improved substantially without hurting precision, but 10/45 escalations are still missed. See `reports/v4_escalation_results.json`.
+
 ## Key Learnings
 
 - **Hybrid failed:** Semantic similarity ≠ intent similarity
