@@ -148,13 +148,9 @@ The ensemble misclassifies 14/45 (31%) on the frozen test set. Real examples fro
 | 4 | 12/14 errors (86%) occurred at confidence < 0.5 | — (systemic, not single example) | The confidence signal is doing real work: when the classifier is wrong, it's usually also unsure. Reassuring for escalation coverage, but means some correct low-confidence answers get needlessly escalated too — a precision/recall tradeoff, not free |
 | 5 | LLM-judge groundedness scores (mean ~1.9/5) diverge sharply from the human rater's holistic scores (mean ~4.8/5) on the same 25 replies, even when a specific historical example is cited by name | See `reports/v4_llm_judge_results.json` vs `data/human_vs_llm_agreement.json` | The LLM judge appears to apply a stricter, more literal standard for "grounded" (near-verbatim alignment with the cited resolution) than a human reader, who accepts a citation + reasonable extrapolation as sufficient. This is a genuine gap in what "grounded" means between evaluator types, not a system bug |
 
-**[HUMAN]** — *Read these and sanity-check the hypotheses before the interview; the raw error list is in `reports/v4_ensemble_final_results.json`.*
-
 ---
 
 ## What is Misleading About My Headline Number?
-
-**[HUMAN]** — *edit freely, but everything below actually happened, nothing's made up.*
 
 The 68.9% accuracy number sounds solid. It isn't as strong as it looks:
 

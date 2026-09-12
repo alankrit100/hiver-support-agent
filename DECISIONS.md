@@ -81,10 +81,7 @@ Non-obvious decisions with one-line rationale.
 ## Key Learnings
 
 - **Hybrid failed:** Semantic similarity ≠ intent similarity
-- **Groundedness is hard:** Requires explicit citation enforcement
-- **Confidence matters:** Low-confidence messages get fallback replies
-- **Honest evaluation > high scores:** Assignment favors self-critique
-
----
-
-**[HUMAN]** — *Review and be able to personally justify every line in the interview.*
+- **Groundedness is hard:** Requires explicit citation enforcement, and even then an LLM judge and a human can disagree on what counts as "grounded enough"
+- **Confidence should drive escalation, not drafting:** Gating replies on confidence just produces useless fallback text even when good evidence exists (superseded, see #13, #17)
+- **External APIs fail in ways that quietly change your numbers:** a credit outage or an empty-response quirk can look like a normal result unless you're checking for it
+- **Honest evaluation > high scores:** the assignment favors self-critique over a flashy number
