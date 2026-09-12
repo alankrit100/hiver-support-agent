@@ -22,6 +22,8 @@ data/*
 !data/v4_bge_m3_test45.ids.json
 !data/v4_bge_m3_dev170.npy
 !data/v4_bge_m3_test45.npy
+!data/faiss_index.faiss
+!data/faiss_index.pkl
 !data/human_scoring_template_v3.json
 !data/human_scoring_template_v3.csv
 !data/human_scores_v3.json

@@ -26,7 +26,7 @@ Non-obvious decisions with one-line rationale.
 
 ## Classification
 
-7. **LLM-only (no regex/keyword/fuzzy)** — Hybrid approach failed (-6.6% accuracy). Semantic similarity doesn't correlate with intent similarity.
+7. **LLM-only (no regex/keyword/fuzzy)** — Hybrid approach failed (-6.6% accuracy). Semantic similarity doesn't correlate with intent similarity. **[SUPERSEDED by V4, decision #16-18]** — the system is no longer LLM-only; the deployed classifier is `bge_lr` (a supervised model) ensembled with the Sarvam few-shot classifier, selected via CV specifically because pure LLM-only underperformed it.
 
 8. **Removed chain-of-thought reasoning** — Sarvam AI returns `None` on longer prompts. Removing reasoning saves ~27% cost with minimal accuracy loss.
 
@@ -46,7 +46,7 @@ Non-obvious decisions with one-line rationale.
 
 12. **Intent-specific guidelines** — Different intents need different reply structures (e.g., `account_access` vs `device_crash_freeze`).
 
-13. **Confidence threshold: 0.3** — Below this, return fallback message. Lowered from 0.3 to allow more LLM-generated replies.
+13. **Confidence threshold: 0.3** — Below this, return fallback message. Lowered from 0.3 to allow more LLM-generated replies. **[SUPERSEDED — this pattern was explicitly removed.]** `reply_drafter.py` no longer uses classifier confidence to gate drafting at all; it always attempts a grounded draft when retrieval evidence exists, and confidence only affects the separate escalation decision (see `escalation.py`). This was the anti-pattern the V4 fixes specifically targeted — low confidence was producing generic fallback replies even when good retrieval evidence existed.
 
 ---
 
