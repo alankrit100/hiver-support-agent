@@ -8,10 +8,12 @@
 
 1. [Problem Framing](#problem-framing)
 2. [Architecture](#architecture)
-3. [Results](#results)
-4. [Failure Analysis](#failure-analysis)
-5. [What is Misleading About My Headline Number?](#what-is-misleading-about-my-headline-number)
-6. [What I'd Do Next](#what-id-do-next)
+3. [V4 Classification](#v4-classification-supersedes-the-numbers-below)
+4. [V1-V3 Results (historical)](#v1-v3-results-historical-superseded-by-v4-above)
+5. [Failure Analysis](#failure-analysis)
+6. [What is Misleading About My Headline Number?](#what-is-misleading-about-my-headline-number)
+7. [What I'd Do Next](#what-id-do-next)
+8. [How to Reproduce](#how-to-reproduce)
 
 ---
 
@@ -78,6 +80,21 @@ V1-V3 (below) were LLM-only classifiers tuned informally against a small test se
 The ensemble weight (`weight_bge=0.8`) was selected by CV on the 170-example dev set only — the frozen test set was touched exactly once, for this final number. See `reports/v4_ensemble_cv_results.json` / `reports/v4_ensemble_final_results.json`.
 
 This is a single 45-example run — treat the exact gap between the two rows as noisy, not a precise measurement.
+
+### V4 Reply Quality (LLM-as-Judge, current pipeline)
+
+25 messages, run through the current classifier + retrieval + reply drafter, scored 1-5 by an LLM judge on the same rubric as the V1-V3 numbers below. 0 replies fell back to the generic no-evidence message (vs. most of them in the pre-fix pipeline — see the V1-V3 table for that comparison).
+
+| Dimension | Score |
+|-----------|-------|
+| Groundedness | 1.88/5 |
+| Relevance | 3.60/5 |
+| Correctness | 3.52/5 |
+| Tone | 4.28/5 |
+| Actionability | 2.52/5 |
+| **Overall** | **3.16/5** |
+
+I also hand-scored the same 25 replies myself, blind to the LLM judge's scores, to check whether the judge can be trusted (`data/human_vs_llm_agreement.json`). Short version: my scores clustered near the top of the scale (mostly 4-5) while the judge was much stricter, especially on groundedness (judge mean 1.88 vs. my mean ~4.8) — the two of us don't agree on what "grounded enough" means. Full reasoning in [What is Misleading About My Headline Number?](#what-is-misleading-about-my-headline-number).
 
 ---
 

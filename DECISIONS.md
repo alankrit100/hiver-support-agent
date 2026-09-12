@@ -36,13 +36,13 @@ Non-obvious decisions with one-line rationale.
 
 9. **FAISS with MiniLM-L6-v2** — Fast (384-dim), good enough for Twitter support. BGE-M3 (1024-dim) tested but 2-3x slower with marginal improvement.
 
-10. **top_k=3 for retrieval** — More examples dilute the prompt. Quality threshold (similarity > 0.4) filters noise.
+10. **top_k=3 for retrieval** — More examples dilute the prompt. **[PARTIALLY SUPERSEDED]** The original similarity>0.4 filter this decision described is gone from `retrieval.py` after the V4 intent-constrained rewrite (decision #16-ish territory, see the retrieval section of the code) — it now returns the top_k intent-preferred matches regardless of absolute similarity, with weak evidence caught downstream by escalation's `WEAK_EVIDENCE_SIMILARITY = 0.4` check instead of being filtered out of retrieval itself.
 
 ---
 
 ## Reply Generation
 
-11. **Citation enforcement in prompt** — "Based on similar cases..." phrasing forces grounding. Only 12.5% of replies currently cite examples (needs improvement).
+11. **Citation enforcement in prompt** — requiring the reply to name "Example 1/2/3" explicitly, not vague phrasing like "based on similar cases." This was weak pre-V4 (only 12.5% of replies actually cited an example). After the V4 reply-drafter fix (confidence no longer suppresses drafting, so the LLM is actually asked to cite far more often), 25/25 replies in the current human-scoring set name a specific example — but see [What is Misleading About My Headline Number?](#what-is-misleading-about-my-headline-number): citing an example isn't the same as the LLM judge agreeing the reply is genuinely grounded in it.
 
 12. **Intent-specific guidelines** — Different intents need different reply structures (e.g., `account_access` vs `device_crash_freeze`).
 
