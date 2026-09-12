@@ -1,0 +1,464 @@
+{
+  "classification": {
+    "per_intent": {
+      "ios_update_issues": {
+        "precision": 0.667,
+        "recall": 0.103,
+        "f1": 0.178,
+        "support": 39
+      },
+      "battery_drain_after_update": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "support": 38
+      },
+      "device_crash_freeze": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "support": 17
+      },
+      "app_malfunction": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "support": 32
+      },
+      "account_access": {
+        "precision": 0,
+        "recall": 0.0,
+        "f1": 0,
+        "support": 39
+      }
+    },
+    "confusion_matrix": {
+      "ios_update_issues": {
+        "unclear": 35,
+        "ios_update_issues": 4
+      },
+      "unclear": {
+        "ios_update_issues": 1,
+        "unclear": 49
+      },
+      "app_malfunction": {
+        "ios_update_issues": 1,
+        "unclear": 31
+      },
+      "battery_drain_after_update": {
+        "unclear": 38
+      },
+      "device_crash_freeze": {
+        "unclear": 17
+      },
+      "account_access": {
+        "unclear": 39
+      }
+    },
+    "accuracy": 0.247,
+    "total": 215,
+    "correct": 53,
+    "mismatches": [
+      {
+        "tweet_id": 517201,
+        "text": "@AppleSupport i have my iphone 6S and ios 11.1.2 this just happened this morning when i woke up. it ",
+        "true_intent": "ios_update_issues",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 52328,
+        "text": "@AppleSupport I\ufe0f have the latest software.",
+        "true_intent": "unclear",
+        "pred_intent": "ios_update_issues",
+        "true_escalate": true,
+        "pred_escalate": false
+      },
+      {
+        "tweet_id": 199442,
+        "text": "@AppleSupport ios11.0.1",
+        "true_intent": "app_malfunction",
+        "pred_intent": "ios_update_issues",
+        "true_escalate": true,
+        "pred_escalate": false
+      },
+      {
+        "tweet_id": 687991,
+        "text": "@AppleSupport @284331 Are youevergoing to fix the spacebar lag on the ipad air2 on IOS 11???  #Horri",
+        "true_intent": "ios_update_issues",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 2149185,
+        "text": "@AppleSupport I did that I\ufe0ft still messes up. But hopefully this will do fine until the next update",
+        "true_intent": "ios_update_issues",
+        "pred_intent": "unclear",
+        "true_escalate": false,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 2869719,
+        "text": "@AppleSupport Other key details: upgraded phone (7) from ios10 to 11 Sunday. Call #1 was received wh",
+        "true_intent": "app_malfunction",
+        "pred_intent": "unclear",
+        "true_escalate": false,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 945681,
+        "text": "@AppleSupport iOS 11 and a 6Splus",
+        "true_intent": "ios_update_issues",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 939170,
+        "text": "@AppleSupport iOS 11.1.2. Instagram and twitter frequently crash maybe contact these developers? Man",
+        "true_intent": "app_malfunction",
+        "pred_intent": "unclear",
+        "true_escalate": false,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 2295658,
+        "text": "@AppleSupport Yes. I have 11.1.1. \nI updated it on Saturday. Two days back. Since then, I\u2019ve had to ",
+        "true_intent": "battery_drain_after_update",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 1851942,
+        "text": "@AppleSupport 11.0.2. Is this smting to do with the update?",
+        "true_intent": "battery_drain_after_update",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 1334356,
+        "text": "@AppleSupport All 32-bit apps don't work with iOS 11. Frustrating! It would be a consolation if we c",
+        "true_intent": "ios_update_issues",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 617265,
+        "text": "@AppleSupport I have experimented all these tricks before you guide me. Before last updates there wa",
+        "true_intent": "battery_drain_after_update",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 208223,
+        "text": "@AppleSupport I update my apps regularly and still happens - only since I downloaded iOS11. Not sure",
+        "true_intent": "device_crash_freeze",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 2041687,
+        "text": "@AppleSupport Cool. Would be equally cool if the update came out soon. Lol.",
+        "true_intent": "app_malfunction",
+        "pred_intent": "unclear",
+        "true_escalate": false,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 1170313,
+        "text": "@AppleSupport 11.0.3 latest version updated. Also tried the \u2018switch off and on\u2019 the phone suggestion",
+        "true_intent": "ios_update_issues",
+        "pred_intent": "unclear",
+        "true_escalate": false,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 722551,
+        "text": "@AppleSupport Yes, my phone keeps freezing and lagging from the stupid software. Either that or I wa",
+        "true_intent": "device_crash_freeze",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 2341808,
+        "text": "@AppleSupport #iOS111 #iphone6s Needs rebooting. Now it works fine.",
+        "true_intent": "app_malfunction",
+        "pred_intent": "unclear",
+        "true_escalate": false,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 2307956,
+        "text": "@AppleSupport Hi version 10.2. Trying to do it wirelessly. Don't have a laptop! :(.",
+        "true_intent": "ios_update_issues",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 448390,
+        "text": "@AppleSupport iPhone 6s iOS 11.1.2 which is showing as up to date. Started today which wasn\u2019t when I",
+        "true_intent": "ios_update_issues",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 292914,
+        "text": "@AppleSupport Thank you but these instructions do not apply.  Many complaining about new update.  Pl",
+        "true_intent": "ios_update_issues",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 560469,
+        "text": "@AppleSupport @27640 update your phone",
+        "true_intent": "ios_update_issues",
+        "pred_intent": "unclear",
+        "true_escalate": false,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 1476950,
+        "text": "@AppleSupport No. The problem started only after iOS11 upgrade https://t.co/ihw21OyhXY",
+        "true_intent": "battery_drain_after_update",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 601372,
+        "text": "@AppleSupport I had to restart it twice it finally went faster. I realized after the recent software",
+        "true_intent": "ios_update_issues",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 2405070,
+        "text": "@AppleSupport Alsooo i can\u2019t get @118189 to download on my iPhone. I\u2019ve spoken with Genius Bar and A",
+        "true_intent": "app_malfunction",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 1181715,
+        "text": "@AppleSupport My 6s Plus just updated last night to 11.0.3. It\u2019s already died twice today. At one po",
+        "true_intent": "battery_drain_after_update",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 810825,
+        "text": "@AppleSupport My gps either won\u2019t load or it\u2019ll make me take wrong turns. Battery life is crap now a",
+        "true_intent": "ios_update_issues",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 2890701,
+        "text": "@AppleSupport My battery was at 80%, and this must have been the 2nd time it's happened. I thought I",
+        "true_intent": "battery_drain_after_update",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 857916,
+        "text": "@AppleSupport My phone will just power off no matter the percentage of the battery. And when I plug ",
+        "true_intent": "battery_drain_after_update",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 248194,
+        "text": "@AppleSupport So far your being here for me isn\u2019t working you are not reading my replies and phone b",
+        "true_intent": "battery_drain_after_update",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 2372229,
+        "text": "@AppleSupport It did after restarting/charging",
+        "true_intent": "battery_drain_after_update",
+        "pred_intent": "unclear",
+        "true_escalate": false,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 1101064,
+        "text": "@AppleSupport Why 11 make my iphone 7+ lacks of battery performance?",
+        "true_intent": "battery_drain_after_update",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 2636991,
+        "text": "@AppleSupport So can you confirm - if I turn \"off\" wi-fi in the control center in iOS 11, isn't that",
+        "true_intent": "app_malfunction",
+        "pred_intent": "unclear",
+        "true_escalate": false,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 1756091,
+        "text": "@AppleSupport It\u2019s the charger port on iPhone 6s, have plug\u2019n\u2019unplug then replug to power 80 times t",
+        "true_intent": "battery_drain_after_update",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 817662,
+        "text": "@AppleSupport I have just used my iPhone as a hotspot to use mobile data and it has let me sign in s",
+        "true_intent": "app_malfunction",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 898713,
+        "text": "@AppleSupport I suspect I need a new battery. I\u2019ll head into the apple store and hope they\u2019ll replac",
+        "true_intent": "battery_drain_after_update",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 548201,
+        "text": "@AppleSupport The device becomes slow, turns off on its own, and often stops abruptly, and the batte",
+        "true_intent": "ios_update_issues",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 1758988,
+        "text": "@AppleSupport Thanks so much. I tried that and it isn\u2019t working, but I will power my phone off and h",
+        "true_intent": "app_malfunction",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 2422589,
+        "text": "@AppleSupport I don\u2019t think I have so I just powered off and on. Now my reminder for 10:15 tomorrow ",
+        "true_intent": "ios_update_issues",
+        "pred_intent": "unclear",
+        "true_escalate": false,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 1850502,
+        "text": "@AppleSupport Yes, I\u2019ve done all that and tried *several* Apple approved lightning cords. It charges",
+        "true_intent": "battery_drain_after_update",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 618562,
+        "text": "@AppleSupport battery drain in ios 11 &amp; 11.0.1 &amp; 11.0.2 and also in 11.1 beta !!",
+        "true_intent": "battery_drain_after_update",
+        "pred_intent": "unclear",
+        "true_escalate": false,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 6816,
+        "text": "@AppleSupport Got any battery cases for iPhone 6s Plus ? My Chinese copy is dodgy",
+        "true_intent": "battery_drain_after_update",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 1753304,
+        "text": "@AppleSupport I turned off a bunch of apps that had background activity on, used my phone for 15 min",
+        "true_intent": "battery_drain_after_update",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 2279564,
+        "text": "@AppleSupport Yes that\u2019s correct, all apple original adapter and plug. But from previous apple devic",
+        "true_intent": "device_crash_freeze",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 1721276,
+        "text": "@AppleSupport Lol..yes it is.  But that\u2019s not what I\u2019m referring to. This speed of drainage is a new",
+        "true_intent": "battery_drain_after_update",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 2280911,
+        "text": "@AppleSupport 1/2 : I appreciate you reaching out. Since I am using my phone the same way I did when",
+        "true_intent": "battery_drain_after_update",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 667055,
+        "text": "@AppleSupport Please require fast charging technology and automatic charging separation in the case ",
+        "true_intent": "battery_drain_after_update",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 2269903,
+        "text": "@AppleSupport Hi - thanks for that - yes, it charges fine when the smart connector is not connected ",
+        "true_intent": "battery_drain_after_update",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 447461,
+        "text": "@AppleSupport Over an hour wasted and a diagnostic check. Only to tell me I need a new battery at th",
+        "true_intent": "battery_drain_after_update",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 2360350,
+        "text": "@AppleSupport The new update has destroyed the iPad and I\ufe0f can\u2019t get to the setting menu to reset.  ",
+        "true_intent": "battery_drain_after_update",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 757177,
+        "text": "@AppleSupport Not yet. On 11.0.2. Battery drain galore since iOS 11.",
+        "true_intent": "battery_drain_after_update",
+        "pred_intent": "unclear",
+        "true_escalate": false,
+        "pred_escalate": true
+      }
+    ]
+  }
+}

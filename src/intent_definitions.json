@@ -1,0 +1,175 @@
+{
+  "brand": "AppleSupport",
+  "description": "Intent categories for Apple customer support messages on Twitter",
+  "intents": [
+    {
+      "name": "ios_update_issues",
+      "description": "Problems with iOS updates including installation errors, failed downloads, version compatibility questions, and post-update bugs.",
+      "examples": [
+        "Yes 'there was an error downloading the software'",
+        "They are not on the same iOS one is 11.0.2 and the other is 11.1.2",
+        "the worse ios deployment to date period!",
+        "After it says verifying it restarts automatically",
+        "Was apps, after I did the iOS DL. I rebooted, twice, they finally updated.",
+        "ios11.0.1",
+        "iOS 11 and a 6Splus",
+        "How about you just put a new update to fix it",
+        "iPhone 6s iOS 11.1.2 which is showing as up to date",
+        "All 32-bit apps don't work with iOS 11",
+        "My phone keeps freezing after the update",
+        "Battery drain after iOS 11 update",
+        "Apps crash after update",
+        "Can't install iOS 11.2",
+        "Update failed to download",
+        "I'm using an iPhone 7 and I just updated to 11.2 this morning",
+        "11.0.3 latest version updated. Also tried the 'switch off and on' the phone suggestion",
+        "Hi version 10.2. Trying to do it wirelessly. Don't have a laptop!"
+      ],
+      "keywords": ["ios", "update", "upgrade", "version", "install", "download", "software"],
+      "boundary_notes": "Merge with feature_question for version inquiries. If customer asks 'should I upgrade?', classify as ios_update_issues. Even short messages mentioning iOS versions should be classified here."
+    },
+    {
+      "name": "battery_drain_after_update",
+      "description": "Battery draining faster than expected, rapid power loss, charging issues, or battery percentage jumping unexpectedly.",
+      "examples": [
+        "11.1.2, I've turned off the background usage and automatic updates. Still draining the battery",
+        "Just took phone off the charger 10 minutes ago. Battery down 6 percent already and phone is hot.",
+        "Right after taking it off the charger/subsequently after when in use or when locked. It seems every time I unlock it's down significantly",
+        "battery drain",
+        "My battery was at 80%, and this must have been the 2nd time it's happened",
+        "My iPod won't hold a charge. I think the battery might be fried?",
+        "Over an hour wasted and a diagnostic check. Only to tell me I need a new battery",
+        "Why 11 make my iphone 7+ lacks of battery performance?",
+        "It's the charger port on iPhone 6s, have plug'n'unplug then replug to power 80 times",
+        "I suspect I need a new battery. I'll head into the apple store",
+        "Yes, I've done all that and tried *several* Apple approved lightning cords. It charges",
+        "battery drain in ios 11 & 11.0.1 & 11.0.2 and also in 11.1 beta !!",
+        "Got any battery cases for iPhone 6s Plus ? My Chinese copy is dodgy",
+        "I turned off a bunch of apps that had background activity on, used my phone for 15 min",
+        "This speed of drainage is a new thing",
+        "Please require fast charging technology and automatic charging separation",
+        "Hi - thanks for that - yes, it charges fine when the smart connector is not connected"
+      ],
+      "keywords": ["battery", "drain", "charge", "power", "percent", "charger"],
+      "boundary_notes": "If message mentions BOTH battery drain AND crashing/freezing, classify as device_crash_freeze (crash is the more severe symptom). Even short messages mentioning battery issues should be classified here."
+    },
+    {
+      "name": "device_crash_freeze",
+      "description": "Phone crashing, freezing, shutting down unexpectedly, becoming unresponsive, or requiring forced restarts.",
+      "examples": [
+        "It happens randomly. Not in any app specifically. I think I've had to hard boot my iPhone at least 10x today because it kept freezing up",
+        "Nope. Didn't work. Computer completely froze while trying to log into Google Drive",
+        "11.0.3 - it has slowed down and the screen doesn't rotate sometimes.. sometimes it hangs",
+        "phone keeps freezing",
+        "keeps restarting",
+        "My phone will just power off no matter the percentage of the battery",
+        "Yes, my phone keeps freezing and lagging from the stupid software",
+        "I feel it's little bit sluggish n the refresh rate when scrolling",
+        "like Pandora the song will show on lock screen and freeze even if I close the app",
+        "I was able to turn off the phone by holding the side button. But my iPhone 7 doesn't respond",
+        "i go on every app and it freezes and I have to force my phone to turn off",
+        "Iphone 7, takes forever for apps to load and sometimes i just have to shut them off",
+        "No it's all of my apps and it's also crashing my phone in general",
+        "A few days ago. No, it is a generic thing, it all sucks!",
+        "Restarting doesn't/hasn't helped. Getting new email doesn't change the notification",
+        "The latest version crashed my phone and I have not been able to get Apple to resolve"
+      ],
+      "keywords": ["crash", "freeze", "hang", "shutdown", "restart", "unresponsive", "stuck", "boot", "sluggish"],
+      "boundary_notes": "Include 'sluggish' and 'slow' here even though they could be battery-related. The user experience is 'device not working properly'. Even short messages mentioning crashes/freezes should be classified here."
+    },
+    {
+      "name": "app_malfunction",
+      "description": "Specific Apple apps (Messages, Safari, Music, iTunes, etc.) not working correctly, Bluetooth/connectivity issues, or feature-specific bugs.",
+      "examples": [
+        "when I tap it nothing happens. restarting does nothing. i went to itunes and it said I hadn't bought the song when I did",
+        "I have deleted and re-installed the app twice with no luck. I found the Amazon app is not working either.",
+        "All sounds yes when I go to the settings to test it it works but any other that setting no.",
+        "Nope. Cant hear. Cant call. Using messenger Calls atm.",
+        "I'm using a 6s Plus. Attached img of error. phone cncts via BT for calls, USB for audio.",
+        "safari not working",
+        "bluetooth issues",
+        "Instagram and twitter frequently crash",
+        "Other key details: upgraded phone (7) from ios10 to 11 Sunday. Call #1 was received",
+        "So can you confirm - if I turn 'off' wi-fi in the control center in iOS 11, isn't that",
+        "I have just used my iPhone as a hotspot to use mobile data and it has let me sign in",
+        "Nothing change. 1.0s timeout it always error. But 1,5s timeout sometimes error or normal",
+        "In text message bar disappear, phone continually freeze, app have to be closed",
+        "Why is autocorrect changing minute to minute and then refuses to change it back",
+        "It appears to be functioning properly now after restarting as normal",
+        "No it also occurs when swiping in between home screens. Buttons become unresponsive too",
+        "It's been super slow, my apps keep shutting down for no reason"
+      ],
+      "keywords": ["app", "message", "safari", "music", "itunes", "bluetooth", "setting", "feature", "work", "audio", "sound"],
+      "boundary_notes": "Catch-all for feature-specific bugs. If it's about a specific app or feature not working, but the device itself is fine, it's app_malfunction. Even short messages mentioning specific apps should be classified here."
+    },
+    {
+      "name": "account_access",
+      "description": "Apple ID issues, iCloud problems, login difficulties, password resets, backup/restore issues, or account recovery.",
+      "examples": [
+        "2/2 and it has my email address there and I am asked for my password which I put in and that is when I get the error message.",
+        "Done twice, but issue remains. I've signed out of iCloud in settings as well, signin there works, but not in the app Store App.",
+        "No haven't backed up since May and its the July onwards photos I want",
+        "can't login",
+        "icloud password",
+        "forgot my apple id",
+        "I bought a iPhone 6 from a friend (actually purchased, not stolen) but I can't reset it",
+        "Im not even able to login to https://t.co/Oc5WWpud2q",
+        "It asks me to login in to my Apple ID and then nothing happens.",
+        "and can't type Apple ID or password",
+        "Backed up all files on iCloud before erasing all content for a software issue",
+        "I should have included sign out and sign in back in. That would affect my account data",
+        "Yes, I contacted Apple to disable my account and they said I would need to contact support",
+        "Yes I did. Keeps coming back with activation error.",
+        "My Apple ID it says it was locked for security reasons but it won't let me unlock it",
+        "This happens within all apps. I have a backup. I did a factory reset and can even pass"
+      ],
+      "keywords": ["account", "id", "password", "icloud", "backup", "login", "sign", "restore", "error"],
+      "boundary_notes": "Include backup/restore issues here even though they could involve apps. The root cause is account/iCloud, not the app itself. Even short messages mentioning login/account issues should be classified here."
+    },
+    {
+      "name": "unclear",
+      "description": "Messages that are completely unclassifiable - empty, gibberish, or contain no useful information about any issue.",
+      "examples": [
+        "@AppleSupport",
+        "??",
+        "Thank you so much!",
+        "??",
+        "Hi",
+        "Help",
+        "Please",
+        "Yes",
+        "No",
+        "Ok",
+        "Thanks",
+        "Love you",
+        "You guys are the best",
+        "Apple is great"
+      ],
+      "keywords": [],
+      "boundary_notes": "ONLY use this intent for messages that are truly unclassifiable. Even short messages with keywords like 'ios', 'battery', 'crash', 'app', 'login' should be classified into one of the 5 specific intents. This is the LAST resort."
+    }
+  ],
+  "resolution_heuristics": {
+    "description": "Defines what constitutes a 'resolved' thread for retrieval purposes",
+    "criteria": [
+      "Thread ends with customer message containing gratitude keywords (thank, thanks, appreciate) AND customer did not report ongoing issue",
+      "Thread ends with customer confirming issue is fixed (working, worked, resolved, got them back)",
+      "Brand responded with ACTUAL TROUBLESHOOTING (not just 'DM us') AND customer did not follow up with complaint",
+      "Thread has 2+ turns and brand provided solution (not just deflection)"
+    ],
+    "exclusions": [
+      "Brand response is ONLY 'DM us' / 'send us a DM' / 'let us know in DM' without any troubleshooting = NOT resolved",
+      "Customer expresses continued frustration after brand response = NOT resolved"
+    ],
+    "statistics": {
+      "sample_size": 200,
+      "brand_response_rate": "61.0%",
+      "single_turn_total": 83,
+      "single_turn_dm_deflections": 59,
+      "single_turn_dm_deflection_rate": "71.1%",
+      "reliable_single_turn_resolutions": 24,
+      "multi_turn_conversations": "22.3%",
+      "brand_closed_thread": "52.7%"
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "baseline": {
+    "approach": "Historical Apple Support replies",
+    "sample_size": 40,
+    "valid_scores": 28,
+    "statistics": {
+      "groundedness": {
+        "mean": 1.43,
+        "min": 1,
+        "max": 3,
+        "count": 28
+      },
+      "relevance": {
+        "mean": 2.64,
+        "min": 1,
+        "max": 5,
+        "count": 28
+      },
+      "correctness": {
+        "mean": 3.46,
+        "min": 1,
+        "max": 5,
+        "count": 28
+      },
+      "tone": {
+        "mean": 2.61,
+        "min": 1,
+        "max": 4,
+        "count": 28
+      },
+      "actionability": {
+        "mean": 2.96,
+        "min": 1,
+        "max": 5,
+        "count": 28
+      },
+      "overall": 2.62
+    }
+  },
+  "improved": {
+    "approach": "Pipeline-generated replies with citation enforcement",
+    "sample_size": 40,
+    "valid_scores": 25,
+    "statistics": {
+      "groundedness": {
+        "mean": 1.08,
+        "min": 1,
+        "max": 2,
+        "count": 25
+      },
+      "relevance": {
+        "mean": 1.88,
+        "min": 1,
+        "max": 4,
+        "count": 25
+      },
+      "correctness": {
+        "mean": 2.8,
+        "min": 1,
+        "max": 5,
+        "count": 25
+      },
+      "tone": {
+        "mean": 2.64,
+        "min": 2,
+        "max": 4,
+        "count": 25
+      },
+      "actionability": {
+        "mean": 2.28,
+        "min": 1,
+        "max": 4,
+        "count": 25
+      },
+      "overall": 2.14
+    }
+  },
+  "analysis": {
+    "groundedness_change": -0.34999999999999987,
+    "overall_change": -0.48,
+    "key_finding": "Pipeline-generated replies scored LOWER because most were fallback messages (low confidence). Only 5/40 had citations."
+  }
+}

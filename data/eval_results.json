@@ -1,0 +1,757 @@
+{
+  "hybrid": {
+    "per_intent": {
+      "ios_update_issues": {
+        "precision": 0.4,
+        "recall": 0.5,
+        "f1": 0.444,
+        "support": 8
+      },
+      "battery_drain_after_update": {
+        "precision": 1.0,
+        "recall": 0.625,
+        "f1": 0.769,
+        "support": 8
+      },
+      "device_crash_freeze": {
+        "precision": 0.25,
+        "recall": 0.25,
+        "f1": 0.25,
+        "support": 4
+      },
+      "app_malfunction": {
+        "precision": 0.6,
+        "recall": 0.429,
+        "f1": 0.5,
+        "support": 7
+      },
+      "account_access": {
+        "precision": 1.0,
+        "recall": 0.625,
+        "f1": 0.769,
+        "support": 8
+      },
+      "unclear": {
+        "precision": 0.438,
+        "recall": 0.7,
+        "f1": 0.538,
+        "support": 10
+      }
+    },
+    "confusion_matrix": {
+      "app_malfunction": {
+        "unclear": 3,
+        "app_malfunction": 3,
+        "ios_update_issues": 1
+      },
+      "ios_update_issues": {
+        "ios_update_issues": 4,
+        "unclear": 3,
+        "device_crash_freeze": 1
+      },
+      "unclear": {
+        "ios_update_issues": 2,
+        "unclear": 7,
+        "device_crash_freeze": 1
+      },
+      "account_access": {
+        "account_access": 5,
+        "app_malfunction": 1,
+        "unclear": 2
+      },
+      "device_crash_freeze": {
+        "device_crash_freeze": 1,
+        "app_malfunction": 1,
+        "ios_update_issues": 1,
+        "unclear": 1
+      },
+      "battery_drain_after_update": {
+        "battery_drain_after_update": 5,
+        "ios_update_issues": 2,
+        "device_crash_freeze": 1
+      }
+    },
+    "accuracy": 0.556,
+    "total": 45,
+    "correct": 25,
+    "mismatches": [
+      {
+        "tweet_id": 1143580,
+        "text": "@AppleSupport I managed to get one screen shot of it going crazy with half the screen missing. This ",
+        "true_intent": "app_malfunction",
+        "pred_intent": "unclear",
+        "method": "semantic_majority",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 2280563,
+        "text": "@AppleSupport @662953 The update stinks",
+        "true_intent": "unclear",
+        "pred_intent": "ios_update_issues",
+        "method": "semantic_majority",
+        "true_escalate": false,
+        "pred_escalate": false
+      },
+      {
+        "tweet_id": 945681,
+        "text": "@AppleSupport iOS 11 and a 6Splus",
+        "true_intent": "ios_update_issues",
+        "pred_intent": "unclear",
+        "method": "llm_with_examples",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 584838,
+        "text": "@AppleSupport Went into apple and they said there is a glitch and a lot of people are having it, but",
+        "true_intent": "unclear",
+        "pred_intent": "device_crash_freeze",
+        "method": "llm_with_examples",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 488005,
+        "text": "@AppleSupport No. Audio continues as normal. Picture freezes.",
+        "true_intent": "device_crash_freeze",
+        "pred_intent": "app_malfunction",
+        "method": "llm_with_examples",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 1181715,
+        "text": "@AppleSupport My 6s Plus just updated last night to 11.0.3. It\u2019s already died twice today. At one po",
+        "true_intent": "battery_drain_after_update",
+        "pred_intent": "ios_update_issues",
+        "method": "semantic_likely",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 2041687,
+        "text": "@AppleSupport Cool. Would be equally cool if the update came out soon. Lol.",
+        "true_intent": "app_malfunction",
+        "pred_intent": "unclear",
+        "method": "semantic_majority",
+        "true_escalate": false,
+        "pred_escalate": false
+      },
+      {
+        "tweet_id": 864002,
+        "text": "@AppleSupport No, I want it off. The setup looks correct, but every time I open the camera Live Phot",
+        "true_intent": "account_access",
+        "pred_intent": "app_malfunction",
+        "method": "llm_with_examples",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 817662,
+        "text": "@AppleSupport I have just used my iPhone as a hotspot to use mobile data and it has let me sign in s",
+        "true_intent": "app_malfunction",
+        "pred_intent": "unclear",
+        "method": "llm_with_examples",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 208223,
+        "text": "@AppleSupport I update my apps regularly and still happens - only since I downloaded iOS11. Not sure",
+        "true_intent": "device_crash_freeze",
+        "pred_intent": "ios_update_issues",
+        "method": "llm_with_examples",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 211223,
+        "text": "@AppleSupport Not in Low Power Mode. Restarted phone. Deleted apps. The only thing I haven't gone so",
+        "true_intent": "account_access",
+        "pred_intent": "unclear",
+        "method": "llm_with_examples",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 810825,
+        "text": "@AppleSupport My gps either won\u2019t load or it\u2019ll make me take wrong turns. Battery life is crap now a",
+        "true_intent": "ios_update_issues",
+        "pred_intent": "device_crash_freeze",
+        "method": "llm_with_examples",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 370354,
+        "text": "@AppleSupport So see how I cannot write a message I have to restart my phone every time https://t.co",
+        "true_intent": "account_access",
+        "pred_intent": "unclear",
+        "method": "semantic_likely",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 2468124,
+        "text": "@AppleSupport I was able to turn off the phone by holding the side button. But my iPhone 7 doesn\u2019t r",
+        "true_intent": "device_crash_freeze",
+        "pred_intent": "unclear",
+        "method": "llm_with_examples",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 2425834,
+        "text": "@AppleSupport No its been happening since i got it",
+        "true_intent": "unclear",
+        "pred_intent": "ios_update_issues",
+        "method": "semantic_majority",
+        "true_escalate": false,
+        "pred_escalate": false
+      },
+      {
+        "tweet_id": 2869719,
+        "text": "@AppleSupport Other key details: upgraded phone (7) from ios10 to 11 Sunday. Call #1 was received wh",
+        "true_intent": "app_malfunction",
+        "pred_intent": "ios_update_issues",
+        "method": "semantic_likely",
+        "true_escalate": false,
+        "pred_escalate": false
+      },
+      {
+        "tweet_id": 2422589,
+        "text": "@AppleSupport I don\u2019t think I have so I just powered off and on. Now my reminder for 10:15 tomorrow ",
+        "true_intent": "ios_update_issues",
+        "pred_intent": "unclear",
+        "method": "semantic_majority",
+        "true_escalate": false,
+        "pred_escalate": false
+      },
+      {
+        "tweet_id": 601372,
+        "text": "@AppleSupport I had to restart it twice it finally went faster. I realized after the recent software",
+        "true_intent": "ios_update_issues",
+        "pred_intent": "unclear",
+        "method": "llm_with_examples",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 1476950,
+        "text": "@AppleSupport No. The problem started only after iOS11 upgrade https://t.co/ihw21OyhXY",
+        "true_intent": "battery_drain_after_update",
+        "pred_intent": "ios_update_issues",
+        "method": "semantic_likely",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 2890701,
+        "text": "@AppleSupport My battery was at 80%, and this must have been the 2nd time it's happened. I thought I",
+        "true_intent": "battery_drain_after_update",
+        "pred_intent": "device_crash_freeze",
+        "method": "llm_with_examples",
+        "true_escalate": true,
+        "pred_escalate": true
+      }
+    ],
+    "method_distribution": {
+      "semantic_majority": 12,
+      "semantic_likely": 11,
+      "llm_with_examples": 22
+    }
+  },
+  "llm_only_test": {
+    "per_intent": {
+      "ios_update_issues": {
+        "precision": 0.545,
+        "recall": 0.514,
+        "f1": 0.529,
+        "support": 35
+      },
+      "battery_drain_after_update": {
+        "precision": 0.92,
+        "recall": 0.605,
+        "f1": 0.73,
+        "support": 38
+      },
+      "device_crash_freeze": {
+        "precision": 0.4,
+        "recall": 0.556,
+        "f1": 0.465,
+        "support": 18
+      },
+      "app_malfunction": {
+        "precision": 0.526,
+        "recall": 0.323,
+        "f1": 0.4,
+        "support": 31
+      },
+      "account_access": {
+        "precision": 0.943,
+        "recall": 0.786,
+        "f1": 0.857,
+        "support": 42
+      },
+      "unclear": {
+        "precision": 0.462,
+        "recall": 0.706,
+        "f1": 0.558,
+        "support": 51
+      }
+    },
+    "confusion_matrix": {
+      "app_malfunction": {
+        "device_crash_freeze": 7,
+        "app_malfunction": 10,
+        "ios_update_issues": 3,
+        "unclear": 10,
+        "account_access": 1
+      },
+      "ios_update_issues": {
+        "ios_update_issues": 18,
+        "device_crash_freeze": 3,
+        "unclear": 11,
+        "app_malfunction": 3
+      },
+      "device_crash_freeze": {
+        "battery_drain_after_update": 1,
+        "unclear": 7,
+        "device_crash_freeze": 10
+      },
+      "unclear": {
+        "app_malfunction": 3,
+        "unclear": 36,
+        "ios_update_issues": 8,
+        "device_crash_freeze": 2,
+        "account_access": 1,
+        "battery_drain_after_update": 1
+      },
+      "account_access": {
+        "account_access": 33,
+        "unclear": 5,
+        "app_malfunction": 2,
+        "device_crash_freeze": 1,
+        "ios_update_issues": 1
+      },
+      "battery_drain_after_update": {
+        "battery_drain_after_update": 23,
+        "ios_update_issues": 3,
+        "unclear": 9,
+        "device_crash_freeze": 2,
+        "app_malfunction": 1
+      }
+    },
+    "accuracy": 0.605,
+    "total": 215,
+    "correct": 130,
+    "mismatches": [
+      {
+        "tweet_id": 902987,
+        "text": "@AppleSupport Have power cycled, toggled VO and zoom on@and off, hard reset; all no go. Want to avoi",
+        "true_intent": "app_malfunction",
+        "pred_intent": "device_crash_freeze",
+        "true_escalate": false,
+        "pred_escalate": false
+      },
+      {
+        "tweet_id": 1913207,
+        "text": "@AppleSupport A few days ago. No, it is a generic thing, it all sucks!. Right now as I type, I touch",
+        "true_intent": "device_crash_freeze",
+        "pred_intent": "battery_drain_after_update",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 2185329,
+        "text": "@AppleSupport Thanks for offering to help. I can\u2019t recall a recent purchase. Is there a way to check",
+        "true_intent": "unclear",
+        "pred_intent": "app_malfunction",
+        "true_escalate": false,
+        "pred_escalate": false
+      },
+      {
+        "tweet_id": 548201,
+        "text": "@AppleSupport The device becomes slow, turns off on its own, and often stops abruptly, and the batte",
+        "true_intent": "ios_update_issues",
+        "pred_intent": "device_crash_freeze",
+        "true_escalate": true,
+        "pred_escalate": false
+      },
+      {
+        "tweet_id": 517201,
+        "text": "@AppleSupport i have my iphone 6S and ios 11.1.2 this just happened this morning when i woke up. it ",
+        "true_intent": "ios_update_issues",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 1851942,
+        "text": "@AppleSupport 11.0.2. Is this smting to do with the update?",
+        "true_intent": "battery_drain_after_update",
+        "pred_intent": "ios_update_issues",
+        "true_escalate": true,
+        "pred_escalate": false
+      },
+      {
+        "tweet_id": 1334356,
+        "text": "@AppleSupport All 32-bit apps don't work with iOS 11. Frustrating! It would be a consolation if we c",
+        "true_intent": "ios_update_issues",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 2280563,
+        "text": "@AppleSupport @662953 The update stinks",
+        "true_intent": "unclear",
+        "pred_intent": "ios_update_issues",
+        "true_escalate": false,
+        "pred_escalate": false
+      },
+      {
+        "tweet_id": 617265,
+        "text": "@AppleSupport I have experimented all these tricks before you guide me. Before last updates there wa",
+        "true_intent": "battery_drain_after_update",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 208223,
+        "text": "@AppleSupport I update my apps regularly and still happens - only since I downloaded iOS11. Not sure",
+        "true_intent": "device_crash_freeze",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 2041687,
+        "text": "@AppleSupport Cool. Would be equally cool if the update came out soon. Lol.",
+        "true_intent": "app_malfunction",
+        "pred_intent": "ios_update_issues",
+        "true_escalate": false,
+        "pred_escalate": false
+      },
+      {
+        "tweet_id": 1173191,
+        "text": "@AppleSupport it says i\u2019m up to date, it\u2019s not giving me an option to update to 4.0.1.",
+        "true_intent": "unclear",
+        "pred_intent": "ios_update_issues",
+        "true_escalate": false,
+        "pred_escalate": false
+      },
+      {
+        "tweet_id": 2341808,
+        "text": "@AppleSupport #iOS111 #iphone6s Needs rebooting. Now it works fine.",
+        "true_intent": "app_malfunction",
+        "pred_intent": "ios_update_issues",
+        "true_escalate": false,
+        "pred_escalate": false
+      },
+      {
+        "tweet_id": 1476950,
+        "text": "@AppleSupport No. The problem started only after iOS11 upgrade https://t.co/ihw21OyhXY",
+        "true_intent": "battery_drain_after_update",
+        "pred_intent": "ios_update_issues",
+        "true_escalate": true,
+        "pred_escalate": false
+      },
+      {
+        "tweet_id": 601372,
+        "text": "@AppleSupport I had to restart it twice it finally went faster. I realized after the recent software",
+        "true_intent": "ios_update_issues",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 2405070,
+        "text": "@AppleSupport Alsooo i can\u2019t get @118189 to download on my iPhone. I\u2019ve spoken with Genius Bar and A",
+        "true_intent": "app_malfunction",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 1181715,
+        "text": "@AppleSupport My 6s Plus just updated last night to 11.0.3. It\u2019s already died twice today. At one po",
+        "true_intent": "battery_drain_after_update",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 810825,
+        "text": "@AppleSupport My gps either won\u2019t load or it\u2019ll make me take wrong turns. Battery life is crap now a",
+        "true_intent": "ios_update_issues",
+        "pred_intent": "device_crash_freeze",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 857916,
+        "text": "@AppleSupport My phone will just power off no matter the percentage of the battery. And when I plug ",
+        "true_intent": "battery_drain_after_update",
+        "pred_intent": "device_crash_freeze",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 2372229,
+        "text": "@AppleSupport It did after restarting/charging",
+        "true_intent": "battery_drain_after_update",
+        "pred_intent": "unclear",
+        "true_escalate": false,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 2636991,
+        "text": "@AppleSupport So can you confirm - if I turn \"off\" wi-fi in the control center in iOS 11, isn't that",
+        "true_intent": "app_malfunction",
+        "pred_intent": "unclear",
+        "true_escalate": false,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 548201,
+        "text": "@AppleSupport The device becomes slow, turns off on its own, and often stops abruptly, and the batte",
+        "true_intent": "ios_update_issues",
+        "pred_intent": "device_crash_freeze",
+        "true_escalate": true,
+        "pred_escalate": false
+      },
+      {
+        "tweet_id": 1758988,
+        "text": "@AppleSupport Thanks so much. I tried that and it isn\u2019t working, but I will power my phone off and h",
+        "true_intent": "app_malfunction",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": false
+      },
+      {
+        "tweet_id": 2422589,
+        "text": "@AppleSupport I don\u2019t think I have so I just powered off and on. Now my reminder for 10:15 tomorrow ",
+        "true_intent": "ios_update_issues",
+        "pred_intent": "app_malfunction",
+        "true_escalate": false,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 2279564,
+        "text": "@AppleSupport Yes that\u2019s correct, all apple original adapter and plug. But from previous apple devic",
+        "true_intent": "device_crash_freeze",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 2269903,
+        "text": "@AppleSupport Hi - thanks for that - yes, it charges fine when the smart connector is not connected ",
+        "true_intent": "battery_drain_after_update",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 447461,
+        "text": "@AppleSupport Over an hour wasted and a diagnostic check. Only to tell me I need a new battery at th",
+        "true_intent": "battery_drain_after_update",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 2360350,
+        "text": "@AppleSupport The new update has destroyed the iPad and I\ufe0f can\u2019t get to the setting menu to reset.  ",
+        "true_intent": "battery_drain_after_update",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 757177,
+        "text": "@AppleSupport Not yet. On 11.0.2. Battery drain galore since iOS 11.",
+        "true_intent": "battery_drain_after_update",
+        "pred_intent": "unclear",
+        "true_escalate": false,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 902987,
+        "text": "@AppleSupport Have power cycled, toggled VO and zoom on@and off, hard reset; all no go. Want to avoi",
+        "true_intent": "app_malfunction",
+        "pred_intent": "device_crash_freeze",
+        "true_escalate": false,
+        "pred_escalate": false
+      },
+      {
+        "tweet_id": 865883,
+        "text": "@AppleSupport oh no... can't risk further deterioration. I will read what people have 2 say about 11",
+        "true_intent": "battery_drain_after_update",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 584838,
+        "text": "@AppleSupport Went into apple and they said there is a glitch and a lot of people are having it, but",
+        "true_intent": "unclear",
+        "pred_intent": "device_crash_freeze",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 151449,
+        "text": "@AppleSupport now its better..time lags aftr app is clicked or button click inside any app is reduce",
+        "true_intent": "unclear",
+        "pred_intent": "app_malfunction",
+        "true_escalate": false,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 2477616,
+        "text": "@AppleSupport Sierra 10.12.6 on the 2015 15 inch Pro. New projects are very slow. Cannot playback th",
+        "true_intent": "ios_update_issues",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 72149,
+        "text": "@AppleSupport im using ios 11, it\u2019s super laggy whenever i receive a notification or sometimes when ",
+        "true_intent": "ios_update_issues",
+        "pred_intent": "app_malfunction",
+        "true_escalate": true,
+        "pred_escalate": false
+      },
+      {
+        "tweet_id": 1225230,
+        "text": "@AppleSupport Great! iOS 11.0.2. Mail stutters and freezes. Other apps freeze. Reboot occasionally w",
+        "true_intent": "ios_update_issues",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 659490,
+        "text": "@AppleSupport We are far away from the initial issue. Why does a 3 year old/3k\u20ac device suddenly lose",
+        "true_intent": "account_access",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 1016907,
+        "text": "@AppleSupport In text message bar disappear, phone continually freeze, app have to be closed and ope",
+        "true_intent": "app_malfunction",
+        "pred_intent": "device_crash_freeze",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 2287426,
+        "text": "@AppleSupport It appears to be functioning properly now after restarting as normal... Phew.\n\nApologi",
+        "true_intent": "app_malfunction",
+        "pred_intent": "unclear",
+        "true_escalate": false,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 956380,
+        "text": "@AppleSupport No it also occurs when swiping in between home screens\nButtons become unresponsive too",
+        "true_intent": "app_malfunction",
+        "pred_intent": "device_crash_freeze",
+        "true_escalate": true,
+        "pred_escalate": false
+      },
+      {
+        "tweet_id": 2802414,
+        "text": "@AppleSupport It\u2019s been super slow, my apps keep shutting down for no reason and it keeps saying \u201cst",
+        "true_intent": "app_malfunction",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 2962842,
+        "text": "@AppleSupport No changes, and restarting does not help. Worked this morning, stopped working one hou",
+        "true_intent": "app_malfunction",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 1291135,
+        "text": "@AppleSupport Yes, I have restarted it maybe three or four times in the last hour trying to get it t",
+        "true_intent": "app_malfunction",
+        "pred_intent": "device_crash_freeze",
+        "true_escalate": true,
+        "pred_escalate": false
+      },
+      {
+        "tweet_id": 2045206,
+        "text": "@AppleSupport Fb&amp;YTbe. It lags for 4-5 secs and then works normal. But the overall response beco",
+        "true_intent": "app_malfunction",
+        "pred_intent": "device_crash_freeze",
+        "true_escalate": true,
+        "pred_escalate": false
+      },
+      {
+        "tweet_id": 870340,
+        "text": "@AppleSupport Yes it persists after rebooting, and even when I try to close out the app and restart ",
+        "true_intent": "app_malfunction",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 1216331,
+        "text": "@AppleSupport I would, if only the damn apps but stop crashing\u2026 Fail!!!",
+        "true_intent": "app_malfunction",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 2703201,
+        "text": "@AppleSupport Thanks @AppleSupport but restart did not work https://t.co/mkWNkgwGgc",
+        "true_intent": "unclear",
+        "pred_intent": "device_crash_freeze",
+        "true_escalate": true,
+        "pred_escalate": false
+      },
+      {
+        "tweet_id": 2271618,
+        "text": "@AppleSupport I have been yes. This seems to pop up from time to time and resists restarting and sig",
+        "true_intent": "unclear",
+        "pred_intent": "account_access",
+        "true_escalate": true,
+        "pred_escalate": false
+      },
+      {
+        "tweet_id": 2804355,
+        "text": "@AppleSupport 10.13.1 and it\u2019s not just an application but there\u2019s a huge noticeable lag in general.",
+        "true_intent": "ios_update_issues",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      },
+      {
+        "tweet_id": 500070,
+        "text": "@AppleSupport No it\u2019s all of my apps and it\u2019s also crashing my phone in general to the point where I",
+        "true_intent": "device_crash_freeze",
+        "pred_intent": "unclear",
+        "true_escalate": true,
+        "pred_escalate": true
+      }
+    ]
+  },
+  "comparison": {
+    "llm_accuracy": 0.605,
+    "hybrid_accuracy": 0.556,
+    "improvement": -0.04899999999999993
+  }
+}

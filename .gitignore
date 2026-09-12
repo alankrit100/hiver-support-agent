@@ -1,0 +1,45 @@
+# Data files (too large for git) -- but the required labeled deliverables
+# and small evaluation artifacts ARE committed; see the exceptions below.
+data/*
+*.pkl
+*.npy
+*.faiss
+
+# Required deliverables / small eval artifacts committed despite the above.
+!data/golden_eval_set.jsonl
+!data/train_set.jsonl
+!data/test_set.jsonl
+!data/apple_support_sample.csv
+!data/human_scoring_template.csv
+!data/human_scoring_template.json
+!data/human_scoring_template_v2.csv
+!data/human_scoring_template_v2.json
+!data/eval_results.json
+!data/eval_results_before.json
+!data/eval_candidates.jsonl
+!data/judge_comparison.json
+!data/v4_bge_m3_dev170.ids.json
+!data/v4_bge_m3_test45.ids.json
+!data/v4_bge_m3_dev170.npy
+!data/v4_bge_m3_test45.npy
+!data/human_scoring_template_v3.json
+!data/human_scoring_template_v3.csv
+!data/human_scores_v3.json
+!data/human_vs_llm_agreement.json
+
+# Environment
+.env
+venv/
+__pycache__/
+*.pyc
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/

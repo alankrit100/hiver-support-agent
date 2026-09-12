@@ -1,0 +1,577 @@
+[
+  {
+    "tweet_id": 2636991,
+    "message": "@AppleSupport So can you confirm - if I turn \"off\" wi-fi in the control center in iOS 11, isn't that going to have my phone draining battery because it's looking for a wi-fi connection I don't have?",
+    "intent": "battery_drain_after_update",
+    "reply": "Turning off Wi\u2011Fi from the Control Center only disconnects it temporarily, so the radio can reconnect later and still use power. To minimize drain, disable Wi\u2011Fi in Settings and make sure your iPhone is running the latest iOS version. Following Example\u202f2's approach for battery\u2011drain issues, updating to a newer iOS (such as iOS\u202f11.1 or later) often resolves these anomalies. Let me know if you\u2019d like steps to update or check your battery health.",
+    "escalate": false,
+    "reply_grounding": "retrieval",
+    "llm_score": {
+      "groundedness": 2,
+      "relevance": 4,
+      "correctness": 2,
+      "tone": 3,
+      "actionability": 2,
+      "tweet_id": 2636991
+    },
+    "human_score": {
+      "groundedness": null,
+      "relevance": null,
+      "correctness": null,
+      "tone": null,
+      "actionability": null
+    }
+  },
+  {
+    "tweet_id": 1772596,
+    "message": "@AppleSupport How about you just put a new update to fix it \ud83e\udd14",
+    "intent": "ios_update_issues",
+    "reply": "We understand you\u2019d like a new update to resolve the issue.\u202fExample\u202f2 showed how to complete the update to iOS\u202f11.1, so you can follow this link to install the latest version: https://t.co/80.\u202fLet us know if the problem persists or if you need any further assistance.",
+    "escalate": true,
+    "reply_grounding": "retrieval",
+    "llm_score": {
+      "groundedness": 2,
+      "relevance": 2,
+      "correctness": 2,
+      "tone": 4,
+      "actionability": 2,
+      "tweet_id": 1772596
+    },
+    "human_score": {
+      "groundedness": null,
+      "relevance": null,
+      "correctness": null,
+      "tone": null,
+      "actionability": null
+    }
+  },
+  {
+    "tweet_id": 2802414,
+    "message": "@AppleSupport It\u2019s been super slow, my apps keep shutting down for no reason and it keeps saying \u201cstorage full\u201d when I haven\u2019t done anything different",
+    "intent": "device_crash_freeze",
+    "reply": "Thanks for reaching out.\u202fExample\u202f1 showed a similar lag and apps crashing, so let\u2019s first force\u2011restart your iPhone (press\u202f\u2191 Volume, then\u202f\u2193 Volume, then hold the side button) and then check Settings\u202f\u2192\u202fGeneral\u202f\u2192\u202fiPhone\u202fStorage to free up space or offload unused apps.\u202fIf that doesn\u2019t help, we can reset all settings or move to a DFU restore as a last step.\u202fLet me know how it goes or if you\u2019d like to continue troubleshooting in DM.",
+    "escalate": true,
+    "reply_grounding": "retrieval",
+    "llm_score": {
+      "groundedness": 2,
+      "relevance": 4,
+      "correctness": 4,
+      "tone": 4,
+      "actionability": 3,
+      "tweet_id": 2802414
+    },
+    "human_score": {
+      "groundedness": null,
+      "relevance": null,
+      "correctness": null,
+      "tone": null,
+      "actionability": null
+    }
+  },
+  {
+    "tweet_id": 2372229,
+    "message": "@AppleSupport It did after restarting/charging",
+    "intent": "battery_drain_after_update",
+    "reply": "We\u2019re glad to hear that a restart and a charge got things working again\u2014like in Example\u202f2 where restarting resolved the problem.\u202fIf the battery continues to drain quickly after future updates, you can check Battery Health in Settings\u202f\u2192\u202fBattery\u202f\u2192\u202fBattery Health and turn off Background App Refresh for apps you don\u2019t need running.\u202fLet us know if the issue returns or if you need any further assistance.",
+    "escalate": true,
+    "reply_grounding": "retrieval",
+    "llm_score": {
+      "groundedness": 2,
+      "relevance": 3,
+      "correctness": 4,
+      "tone": 5,
+      "actionability": 2,
+      "tweet_id": 2372229
+    },
+    "human_score": {
+      "groundedness": null,
+      "relevance": null,
+      "correctness": null,
+      "tone": null,
+      "actionability": null
+    }
+  },
+  {
+    "tweet_id": 1326038,
+    "message": "@AppleSupport If you're curious the solution was to boot into recovery, manually convert the disk to APFS, and then retry the installer  #imac #highsierra",
+    "intent": "unclear",
+    "reply": "Glad you were able to resolve it by booting into recovery, converting the disk to APFS, and retrying the installer.\u202fLike in Example\u202f1, a simple system\u2011level reset often clears the problem, and it\u2019s great to hear yours worked.\u202fIf you run into any other issues or need further assistance, just let us know!",
+    "escalate": false,
+    "reply_grounding": "retrieval",
+    "llm_score": {
+      "groundedness": 2,
+      "relevance": 3,
+      "correctness": 3,
+      "tone": 4,
+      "actionability": 1,
+      "tweet_id": 1326038
+    },
+    "human_score": {
+      "groundedness": null,
+      "relevance": null,
+      "correctness": null,
+      "tone": null,
+      "actionability": null
+    }
+  },
+  {
+    "tweet_id": 945681,
+    "message": "@AppleSupport iOS 11 and a 6Splus",
+    "intent": "ios_update_issues",
+    "reply": "We\u2019ve seen this before\u2014**Example\u202f2 showed checking Settings\u202f>\u202fGeneral\u202f>\u202fSoftware\u202fUpdate**, so please open that menu on your iPhone\u202f6S\u202fPlus and see if iOS\u202f11.1 (or a later version) is available to install. If no update appears, try a force\u2011restart (press and hold the Power and Home buttons until the Apple logo appears) and then check again. Let me know if you still can\u2019t find an update, and we can continue troubleshooting via DM.",
+    "escalate": true,
+    "reply_grounding": "retrieval",
+    "llm_score": {
+      "groundedness": 2,
+      "relevance": 4,
+      "correctness": 5,
+      "tone": 4,
+      "actionability": 4,
+      "tweet_id": 945681
+    },
+    "human_score": {
+      "groundedness": null,
+      "relevance": null,
+      "correctness": null,
+      "tone": null,
+      "actionability": null
+    }
+  },
+  {
+    "tweet_id": 2869719,
+    "message": "@AppleSupport Other key details: upgraded phone (7) from ios10 to 11 Sunday. Call #1 was received while phone was locked. I had issues unlocking while on the call.",
+    "intent": "app_malfunction",
+    "reply": "We\u2019re sorry you\u2019re having trouble unlocking your iPhone after the iOS\u202f11 upgrade.\u202fBuilding on Example\u202f1\u2019s solution of resetting a system component, try a force\u2011restart (hold Power\u202f+\u202fHome until the Apple logo appears) and then verify Settings\u202f\u2192\u202fTouch\u202fID\u202f&\u202fPasscode (or Passcode) is enabled and correctly configured.\u202fIf the problem persists, we\u2019ll continue troubleshooting in DM as we did in Example\u202f2.",
+    "escalate": true,
+    "reply_grounding": "retrieval",
+    "llm_score": {
+      "groundedness": 1,
+      "relevance": 4,
+      "correctness": 4,
+      "tone": 5,
+      "actionability": 2,
+      "tweet_id": 2869719
+    },
+    "human_score": {
+      "groundedness": null,
+      "relevance": null,
+      "correctness": null,
+      "tone": null,
+      "actionability": null
+    }
+  },
+  {
+    "tweet_id": 1181715,
+    "message": "@AppleSupport My 6s Plus just updated last night to 11.0.3. It\u2019s already died twice today. At one point was as 54% &amp; reboot switched it to 77%.",
+    "intent": "device_crash_freeze",
+    "reply": "I\u2019m sorry you\u2019re experiencing repeated shutdowns after the iOS\u202f11.0.3 update.\u202fFirst, try a force\u2011restart (press and hold Power\u202f+\u202fHome until the Apple logo appears); if the issue persists, updating to iOS\u202f11.1 often resolves post\u2011update instability\u2014**Example\u202f2 showed updating to iOS\u202f11.1 to test if the problem remains**. Let me know if the restart or the update helps, or if you\u2019d like steps for a DFU restore.",
+    "escalate": true,
+    "reply_grounding": "retrieval",
+    "llm_score": {
+      "groundedness": 2,
+      "relevance": 4,
+      "correctness": 4,
+      "tone": 5,
+      "actionability": 4,
+      "tweet_id": 1181715
+    },
+    "human_score": {
+      "groundedness": null,
+      "relevance": null,
+      "correctness": null,
+      "tone": null,
+      "actionability": null
+    }
+  },
+  {
+    "tweet_id": 1225230,
+    "message": "@AppleSupport Great! iOS 11.0.2. Mail stutters and freezes. Other apps freeze. Reboot occasionally works, most times not. And I need to reboot often.",
+    "intent": "device_crash_freeze",
+    "reply": "We\u2019re sorry you\u2019re experiencing stutters and freezes on iOS\u202f11.0.2.\u202fFollowing Example\u202f2\u2019s approach for checking the iOS version, could you confirm the exact version you\u2019re on and whether you\u2019ve tried a force\u2011restart (hold Power\u202f+\u202fHome until the Apple logo appears)? If the issue persists, try resetting all settings (Settings\u202f\u2192\u202fGeneral\u202f\u2192\u202fReset\u202f\u2192\u202fReset All Settings) and, if needed, a DFU restore. Let us know the results or any additional details, and we\u2019ll help you further.",
+    "escalate": false,
+    "reply_grounding": "retrieval",
+    "llm_score": {
+      "groundedness": 1,
+      "relevance": 2,
+      "correctness": 3,
+      "tone": 4,
+      "actionability": 1,
+      "tweet_id": 1225230
+    },
+    "human_score": {
+      "groundedness": null,
+      "relevance": null,
+      "correctness": null,
+      "tone": null,
+      "actionability": null
+    }
+  },
+  {
+    "tweet_id": 2287426,
+    "message": "@AppleSupport It appears to be functioning properly now after restarting as normal... Phew.\n\nApologies for swearing and being mad - it really stuffed up my morning!",
+    "intent": "app_malfunction",
+    "reply": "Glad to hear the restart got everything back to normal\u2014sometimes a simple reboot clears app glitches. Like in Example\u202f2, a quick restart is often the fastest fix for these issues. If the problem returns or you notice any other odd behavior, just let us know and we\u2019ll dig deeper.",
+    "escalate": true,
+    "reply_grounding": "retrieval",
+    "llm_score": {
+      "groundedness": 2,
+      "relevance": 4,
+      "correctness": 4,
+      "tone": 5,
+      "actionability": 2,
+      "tweet_id": 2287426
+    },
+    "human_score": {
+      "groundedness": null,
+      "relevance": null,
+      "correctness": null,
+      "tone": null,
+      "actionability": null
+    }
+  },
+  {
+    "tweet_id": 569251,
+    "message": "@AppleSupport You have no idea how mad I am that copy and paste was the answer all along. Nevertheless, thank you!",
+    "intent": "unclear",
+    "reply": "Thanks for letting us know it\u2019s all sorted! Example\u202f1 showed a concise thank\u2011you response, so let\u2019s keep it brief and say we\u2019re glad the copy\u2011and\u2011paste trick worked for you. If anything else comes up, just give us a shout.",
+    "escalate": false,
+    "reply_grounding": "retrieval",
+    "llm_score": {
+      "groundedness": 2,
+      "relevance": 4,
+      "correctness": 4,
+      "tone": 4,
+      "actionability": 2,
+      "tweet_id": 569251
+    },
+    "human_score": {
+      "groundedness": null,
+      "relevance": null,
+      "correctness": null,
+      "tone": null,
+      "actionability": null
+    }
+  },
+  {
+    "tweet_id": 553667,
+    "message": "@AppleSupport yes, i already tried restarting.",
+    "intent": "unclear",
+    "reply": "We understand restarting didn\u2019t resolve the problem. Like in Example\u202f3, let\u2019s try a different step\u2014please force\u2011restart your device (press and quickly release Volume\u202fUp, then Volume\u202fDown, then hold the side button until the Apple logo appears) and let us know what you see. If the issue persists, could you tell us any error messages or what you\u2019re trying to do when it occurs? We\u2019re happy to continue troubleshooting with you.",
+    "escalate": false,
+    "reply_grounding": "retrieval",
+    "llm_score": {
+      "groundedness": 2,
+      "relevance": 4,
+      "correctness": 4,
+      "tone": 5,
+      "actionability": 3,
+      "tweet_id": 553667
+    },
+    "human_score": {
+      "groundedness": null,
+      "relevance": null,
+      "correctness": null,
+      "tone": null,
+      "actionability": null
+    }
+  },
+  {
+    "tweet_id": 2271618,
+    "message": "@AppleSupport I have been yes. This seems to pop up from time to time and resists restarting and signing out and in as well. Absolutely infuriating.",
+    "intent": "account_access",
+    "reply": "I\u2019m sorry you\u2019re still seeing that message and that signing out/in isn\u2019t helping.\u202fFollowing Example\u202f2\u2019s approach for Apple\u202fID access issues, try resetting your password at\u202fiforgot.apple.com, then sign out of iCloud in\u202fSettings\u202f\u2192\u202f[Your Name]\u202f\u2192\u202fSign\u202fOut and sign back in with the new credentials.\u202fIf the problem continues, let\u2019s continue in a private DM so we can gather more details and troubleshoot further.",
+    "escalate": true,
+    "reply_grounding": "retrieval",
+    "llm_score": {
+      "groundedness": 2,
+      "relevance": 3,
+      "correctness": 4,
+      "tone": 4,
+      "actionability": 2,
+      "tweet_id": 2271618
+    },
+    "human_score": {
+      "groundedness": null,
+      "relevance": null,
+      "correctness": null,
+      "tone": null,
+      "actionability": null
+    }
+  },
+  {
+    "tweet_id": 1120569,
+    "message": "@AppleSupport shit\u2026\u2026iOS 11.0.3 https://t.co/0TQPF7a0S1",
+    "intent": "ios_update_issues",
+    "reply": "Sorry to hear you\u2019re having trouble with iOS\u202f11.0.3.\u202fExample\u202f1 showed that checking\u202fSettings\u202f\u2192\u202fGeneral\u202f\u2192\u202fSoftware\u202fUpdate is the first step, and you\u2019ll see that iOS\u202f11.1 is already available for download.\u202fIf you run into any issues installing the update, let me know and I\u2019ll help you troubleshoot further.",
+    "escalate": true,
+    "reply_grounding": "retrieval",
+    "llm_score": {
+      "groundedness": 2,
+      "relevance": 3,
+      "correctness": 4,
+      "tone": 4,
+      "actionability": 3,
+      "tweet_id": 1120569
+    },
+    "human_score": {
+      "groundedness": null,
+      "relevance": null,
+      "correctness": null,
+      "tone": null,
+      "actionability": null
+    }
+  },
+  {
+    "tweet_id": 1721276,
+    "message": "@AppleSupport Lol..yes it is.  But that\u2019s not what I\u2019m referring to. This speed of drainage is a new phenomenon for my phone.",
+    "intent": "battery_drain_after_update",
+    "reply": "We understand how frustrating rapid battery loss can be, especially after an update.\u202fExample\u202f1 showed updating the device to the latest iOS version (iOS\u202f11.1) to see if the drain improves, so please install any available iOS updates and then monitor the battery.\u202fAfter updating, check Battery Health in Settings\u202f\u2192\u202fBattery\u202f\u2192\u202fBattery Health and consider disabling Background App Refresh for apps you don\u2019t need; let us know if the issue continues and we\u2019ll explore additional steps.",
+    "escalate": false,
+    "reply_grounding": "retrieval",
+    "llm_score": {
+      "groundedness": 2,
+      "relevance": 3,
+      "correctness": 2,
+      "tone": 4,
+      "actionability": 2,
+      "tweet_id": 1721276
+    },
+    "human_score": {
+      "groundedness": null,
+      "relevance": null,
+      "correctness": null,
+      "tone": null,
+      "actionability": null
+    }
+  },
+  {
+    "tweet_id": 1411640,
+    "message": "@AppleSupport Oh well it\u2019s just not charging properly and it\u2019s hooked up to my MacBook",
+    "intent": "battery_drain_after_update",
+    "reply": "Sorry to hear your iPhone isn\u2019t charging properly when it\u2019s attached to your MacBook. Example\u202f1 showed that the device was connected but the battery kept dropping, so let\u2019s try checking the charging cable and USB\u2011C port, using a different power source, and reviewing Battery\u202fHealth in Settings\u202f\u2192\u202fBattery\u202f\u2192\u202fBattery\u202fHealth. If it still won\u2019t charge, we can explore a DFU restore. Feel free to DM us with your device details for further assistance.",
+    "escalate": true,
+    "reply_grounding": "retrieval",
+    "llm_score": {
+      "groundedness": 2,
+      "relevance": 4,
+      "correctness": 3,
+      "tone": 5,
+      "actionability": 2,
+      "tweet_id": 1411640
+    },
+    "human_score": {
+      "groundedness": null,
+      "relevance": null,
+      "correctness": null,
+      "tone": null,
+      "actionability": null
+    }
+  },
+  {
+    "tweet_id": 757177,
+    "message": "@AppleSupport Not yet. On 11.0.2. Battery drain galore since iOS 11.",
+    "intent": "battery_drain_after_update",
+    "reply": "We\u2019re sorry you\u2019re seeing rapid drain after iOS\u202f11.0.2. Like in Example\u202f3, we recommend updating your iPhone to the latest iOS\u202f11.1 release and then monitoring the battery life; many users see the issue resolve after the patch. After the update, check Battery Health in Settings\u202f\u2192\u202fBattery and turn off Background App Refresh for apps you don\u2019t need running constantly. If the problem persists, please DM us with your device details so we can dive deeper.",
+    "escalate": true,
+    "reply_grounding": "retrieval",
+    "llm_score": {
+      "groundedness": 2,
+      "relevance": 4,
+      "correctness": 3,
+      "tone": 4,
+      "actionability": 4,
+      "tweet_id": 757177
+    },
+    "human_score": {
+      "groundedness": null,
+      "relevance": null,
+      "correctness": null,
+      "tone": null,
+      "actionability": null
+    }
+  },
+  {
+    "tweet_id": 2307956,
+    "message": "@AppleSupport Hi version 10.2. Trying to do it wirelessly. Don't have a laptop! :(.",
+    "intent": "ios_update_issues",
+    "reply": "We can update your iPhone wirelessly by going to **Settings\u202f\u2192\u202fGeneral\u202f\u2192\u202fSoftware Update**, ensuring you\u2019re on a stable Wi\u2011Fi network and have at least 50\u202f% battery (or keep it plugged in).\u202fExample\u202f1 showed we provide a direct update link for iOS upgrades, so you can follow the same steps without needing a computer. If the update still won\u2019t appear, let me know and we can troubleshoot further or arrange a DM chat.",
+    "escalate": true,
+    "reply_grounding": "retrieval",
+    "llm_score": {
+      "groundedness": 2,
+      "relevance": 5,
+      "correctness": 5,
+      "tone": 4,
+      "actionability": 5,
+      "tweet_id": 2307956
+    },
+    "human_score": {
+      "groundedness": null,
+      "relevance": null,
+      "correctness": null,
+      "tone": null,
+      "actionability": null
+    }
+  },
+  {
+    "tweet_id": 33315,
+    "message": "@AppleSupport Battery dies fast as hell now. Phone always is freezing up and I end up having to wait like 15 minutes for it to get unfreeze",
+    "intent": "device_crash_freeze",
+    "reply": "We\u2019re sorry you\u2019re dealing with both rapid battery drain and frequent freezes.\u202fExample\u202f1 showed that a force\u2011restart often clears screen lag and freezing, so please press and quickly release Volume\u202fUp, then Volume\u202fDown, and hold the Side button until the Apple logo appears.\u202fExample\u202f2 showed that reviewing Battery Health and turning off Background App Refresh (Settings\u202f\u2192\u202fBattery\u202f\u2192\u202fBattery Health and Settings\u202f\u2192\u202fGeneral\u202f\u2192\u202fBackground App Refresh) can help recover lost runtime. Let us know if the issue persists and we can explore a settings reset or DFU restore.",
+    "escalate": true,
+    "reply_grounding": "retrieval",
+    "llm_score": {
+      "groundedness": 2,
+      "relevance": 3,
+      "correctness": 2,
+      "tone": 4,
+      "actionability": 2,
+      "tweet_id": 33315
+    },
+    "human_score": {
+      "groundedness": null,
+      "relevance": null,
+      "correctness": null,
+      "tone": null,
+      "actionability": null
+    }
+  },
+  {
+    "tweet_id": 944214,
+    "message": "@AppleSupport Restarting doesn\u2019t/hasn\u2019t helped. Getting new email doesn\u2019t change the notification either. Perpetually stuck at 1",
+    "intent": "device_crash_freeze",
+    "reply": "Sorry you\u2019re still stuck at the boot screen.\u202fExample\u202f1 showed that a full reset sequence\u2014first a force\u2011restart (press volume\u202f\u2191, then volume\u202f\u2193, then hold the side button until the Apple logo appears) and, if that doesn\u2019t clear the loop, entering recovery mode via a computer to reinstall iOS\u2014often resolves the \u201cstuck at\u202f1\u201d freeze.\u202fGive those steps a try and let us know if the device boots normally or if you need further assistance.",
+    "escalate": false,
+    "reply_grounding": "retrieval",
+    "llm_score": {
+      "groundedness": 1,
+      "relevance": 3,
+      "correctness": 3,
+      "tone": 4,
+      "actionability": 2,
+      "tweet_id": 944214
+    },
+    "human_score": {
+      "groundedness": null,
+      "relevance": null,
+      "correctness": null,
+      "tone": null,
+      "actionability": null
+    }
+  },
+  {
+    "tweet_id": 1334356,
+    "message": "@AppleSupport All 32-bit apps don't work with iOS 11. Frustrating! It would be a consolation if we could use them in previous devices/iOS! Thank you!!!",
+    "intent": "app_malfunction",
+    "reply": "We understand how frustrating it is to lose access to your 32\u2011bit apps after upgrading to iOS\u202f11.\u202fiOS\u202f11 removed support for 32\u2011bit software, so the only way to keep using those apps is to run them on a device that\u2019s still on iOS\u202f10 or earlier, or to see if the developers have released a 64\u2011bit update.\u202fFollowing Example\u202f2's approach for checking updates, please verify you\u2019re on the latest iOS\u202f11.x version in Settings\u202f\u25b6\u202fGeneral\u202f\u25b6\u202fSoftware Update, as later patches won\u2019t restore 32\u2011bit compatibility but may improve overall performance.\u202fIf you\u2019d like personalized assistance, feel free to continue the conversation in DM.",
+    "escalate": true,
+    "reply_grounding": "retrieval",
+    "llm_score": {
+      "groundedness": 3,
+      "relevance": 5,
+      "correctness": 5,
+      "tone": 5,
+      "actionability": 2,
+      "tweet_id": 1334356
+    },
+    "human_score": {
+      "groundedness": null,
+      "relevance": null,
+      "correctness": null,
+      "tone": null,
+      "actionability": null
+    }
+  },
+  {
+    "tweet_id": 2295658,
+    "message": "@AppleSupport Yes. I have 11.1.1. \nI updated it on Saturday. Two days back. Since then, I\u2019ve had to charge my phone at least 5 times in a day.",
+    "intent": "battery_drain_after_update",
+    "reply": "We\u2019re sorry you\u2019re experiencing rapid drain after the iOS\u202f11.1.1 update.\u202fExample\u202f1 showed that updating to a newer iOS version can often resolve unexpected battery drain, so please check for any iOS\u202f11.3 (or later) update and install it.\u202fAdditionally, try disabling Background App Refresh and limiting location services in Settings, which frequently helps after an update.\u202fLike in Example\u202f2, feel free to DM us with your battery\u2011usage details if the issue continues, and we\u2019ll investigate further.",
+    "escalate": true,
+    "reply_grounding": "retrieval",
+    "llm_score": {
+      "groundedness": 1,
+      "relevance": 4,
+      "correctness": 3,
+      "tone": 4,
+      "actionability": 2,
+      "tweet_id": 2295658
+    },
+    "human_score": {
+      "groundedness": null,
+      "relevance": null,
+      "correctness": null,
+      "tone": null,
+      "actionability": null
+    }
+  },
+  {
+    "tweet_id": 1120564,
+    "message": "@AppleSupport Since upgrading to 11.0.3, I can literally watch my battery percentage tick down while using my phone. This is madness! #wtf",
+    "intent": "battery_drain_after_update",
+    "reply": "I understand how frustrating rapid battery drain after iOS\u202f11.0.3 can be.\u202fExample\u202f2 showed we should update the device to iOS\u202f11.1 and test whether the issue persists, so please install the latest iOS and monitor the battery afterward.\u202fIf the problem remains,\u202flike in Example\u202f1, DM us with your exact battery runtime so we can check battery health and walk you through disabling background app refresh. Let me know how it goes!",
+    "escalate": true,
+    "reply_grounding": "retrieval",
+    "llm_score": {
+      "groundedness": 2,
+      "relevance": 4,
+      "correctness": 3,
+      "tone": 4,
+      "actionability": 4,
+      "tweet_id": 1120564
+    },
+    "human_score": {
+      "groundedness": null,
+      "relevance": null,
+      "correctness": null,
+      "tone": null,
+      "actionability": null
+    }
+  },
+  {
+    "tweet_id": 902987,
+    "message": "@AppleSupport Have power cycled, toggled VO and zoom on@and off, hard reset; all no go. Want to avoid wipe.",
+    "intent": "device_crash_freeze",
+    "reply": "Sorry to hear the device is still unresponsive.\u202fFollowing Example\u202f3's approach for persistent freezes, try a force\u2011restart (quickly press volume\u202fup, then volume\u202fdown, then hold the side button until the Apple logo appears) and, if that doesn\u2019t help, reset all settings via **Settings\u202f\u2192\u202fGeneral\u202f\u2192\u202fReset\u202f\u2192\u202fReset All Settings**.\u202fIf the problem remains, we can proceed with a DFU restore while preserving your iCloud backup.\u202fLet me know which step works or if you\u2019d like detailed instructions for the next step.",
+    "escalate": true,
+    "reply_grounding": "retrieval",
+    "llm_score": {
+      "groundedness": 2,
+      "relevance": 3,
+      "correctness": 4,
+      "tone": 5,
+      "actionability": 3,
+      "tweet_id": 902987
+    },
+    "human_score": {
+      "groundedness": null,
+      "relevance": null,
+      "correctness": null,
+      "tone": null,
+      "actionability": null
+    }
+  },
+  {
+    "tweet_id": 1924729,
+    "message": "@AppleSupport Yes i am",
+    "intent": "unclear",
+    "reply": "Thanks for confirming! We'll continue the conversation in Direct Message to protect your privacy.  \n\nAs in Example\u202f1, we\u2019ve noted your reply and will shift to DM for further assistance. Let us know any details you can share there, and we\u2019ll help you right away.",
+    "escalate": false,
+    "reply_grounding": "retrieval",
+    "llm_score": {
+      "groundedness": 2,
+      "relevance": 4,
+      "correctness": 4,
+      "tone": 4,
+      "actionability": 2,
+      "tweet_id": 1924729
+    },
+    "human_score": {
+      "groundedness": null,
+      "relevance": null,
+      "correctness": null,
+      "tone": null,
+      "actionability": null
+    }
+  }
+]

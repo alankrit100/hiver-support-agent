@@ -1,0 +1,527 @@
+[
+  {
+    "tweet_id": 2636991,
+    "message": "@AppleSupport So can you confirm - if I turn \"off\" wi-fi in the control center in iOS 11, isn't that going to have my phone draining battery because i",
+    "intent": "app_malfunction",
+    "reply": "We'd like to help you with this. Could you provide a bit more detail about the issue you're experiencing? You can also DM us for more personalized support.",
+    "llm_score": {
+      "groundedness": 1,
+      "relevance": 1,
+      "correctness": 1,
+      "tone": 2,
+      "actionability": 2,
+      "tweet_id": 2636991
+    },
+    "human_score": {
+      "groundedness": null,
+      "relevance": null,
+      "correctness": null,
+      "tone": null,
+      "actionability": null
+    }
+  },
+  {
+    "tweet_id": 1772596,
+    "message": "@AppleSupport How about you just put a new update to fix it \ud83e\udd14",
+    "intent": "ios_update_issues",
+    "reply": "I don't have a similar resolved case for this, but we understand how frustrating it is when an update doesn't fully address an issue. We recommend checking for newer iOS patches and trying a force res",
+    "llm_score": {
+      "groundedness": 1,
+      "relevance": 2,
+      "correctness": 4,
+      "tone": 2,
+      "actionability": 2,
+      "tweet_id": 1772596
+    },
+    "human_score": {
+      "groundedness": null,
+      "relevance": null,
+      "correctness": null,
+      "tone": null,
+      "actionability": null
+    }
+  },
+  {
+    "tweet_id": 2802414,
+    "message": "@AppleSupport It\u2019s been super slow, my apps keep shutting down for no reason and it keeps saying \u201cstorage full\u201d when I haven\u2019t done anything different",
+    "intent": "app_malfunction",
+    "reply": "We'd like to help you with this. Could you provide a bit more detail about the issue you're experiencing? You can also DM us for more personalized support.",
+    "llm_score": {
+      "groundedness": 1,
+      "relevance": 1,
+      "correctness": 2,
+      "tone": 2,
+      "actionability": 1,
+      "tweet_id": 2802414
+    },
+    "human_score": {
+      "groundedness": null,
+      "relevance": null,
+      "correctness": null,
+      "tone": null,
+      "actionability": null
+    }
+  },
+  {
+    "tweet_id": 2372229,
+    "message": "@AppleSupport It did after restarting/charging",
+    "intent": "battery_drain_after_update",
+    "reply": "We'd like to help you with this. Could you provide a bit more detail about the issue you're experiencing? You can also DM us for more personalized support.",
+    "llm_score": {
+      "groundedness": 1,
+      "relevance": 1,
+      "correctness": 3,
+      "tone": 3,
+      "actionability": 2,
+      "tweet_id": 2372229
+    },
+    "human_score": {
+      "groundedness": null,
+      "relevance": null,
+      "correctness": null,
+      "tone": null,
+      "actionability": null
+    }
+  },
+  {
+    "tweet_id": 1326038,
+    "message": "@AppleSupport If you're curious the solution was to boot into recovery, manually convert the disk to APFS, and then retry the installer  #imac #highsi",
+    "intent": "unclear",
+    "reply": "We'd like to help you with this. Could you provide a bit more detail about the issue you're experiencing? You can also DM us for more personalized support.",
+    "llm_score": {
+      "groundedness": 1,
+      "relevance": 1,
+      "correctness": 1,
+      "tone": 2,
+      "actionability": 2,
+      "tweet_id": 1326038
+    },
+    "human_score": {
+      "groundedness": null,
+      "relevance": null,
+      "correctness": null,
+      "tone": null,
+      "actionability": null
+    }
+  },
+  {
+    "tweet_id": 945681,
+    "message": "@AppleSupport iOS 11 and a 6Splus",
+    "intent": "ios_update_issues",
+    "reply": "We'd like to help you with this. Could you provide a bit more detail about the issue you're experiencing? You can also DM us for more personalized support.",
+    "llm_score": {
+      "groundedness": 1,
+      "relevance": 2,
+      "correctness": 3,
+      "tone": 3,
+      "actionability": 3,
+      "tweet_id": 945681
+    },
+    "human_score": {
+      "groundedness": null,
+      "relevance": null,
+      "correctness": null,
+      "tone": null,
+      "actionability": null
+    }
+  },
+  {
+    "tweet_id": 2869719,
+    "message": "@AppleSupport Other key details: upgraded phone (7) from ios10 to 11 Sunday. Call #1 was received while phone was locked. I had issues unlocking while",
+    "intent": "app_malfunction",
+    "reply": "We'd like to help you with this. Could you provide a bit more detail about the issue you're experiencing? You can also DM us for more personalized support.",
+    "llm_score": {
+      "groundedness": 1,
+      "relevance": 2,
+      "correctness": 2,
+      "tone": 3,
+      "actionability": 3,
+      "tweet_id": 2869719
+    },
+    "human_score": {
+      "groundedness": null,
+      "relevance": null,
+      "correctness": null,
+      "tone": null,
+      "actionability": null
+    }
+  },
+  {
+    "tweet_id": 1181715,
+    "message": "@AppleSupport My 6s Plus just updated last night to 11.0.3. It\u2019s already died twice today. At one point was as 54% &amp; reboot switched it to 77%.",
+    "intent": "battery_drain_after_update",
+    "reply": "We'd like to help you with this. Could you provide a bit more detail about the issue you're experiencing? You can also DM us for more personalized support.",
+    "llm_score": {
+      "groundedness": 1,
+      "relevance": 2,
+      "correctness": 3,
+      "tone": 2,
+      "actionability": 2,
+      "tweet_id": 1181715
+    },
+    "human_score": {
+      "groundedness": null,
+      "relevance": null,
+      "correctness": null,
+      "tone": null,
+      "actionability": null
+    }
+  },
+  {
+    "tweet_id": 1225230,
+    "message": "@AppleSupport Great! iOS 11.0.2. Mail stutters and freezes. Other apps freeze. Reboot occasionally works, most times not. And I need to reboot often.",
+    "intent": "ios_update_issues",
+    "reply": "Several similar cases suggest we'd like to gather some additional details to trace these post-update freezes. Could you share your device model and let us know if the issues occur after specific actio",
+    "llm_score": {
+      "groundedness": 2,
+      "relevance": 4,
+      "correctness": 4,
+      "tone": 3,
+      "actionability": 4,
+      "tweet_id": 1225230
+    },
+    "human_score": {
+      "groundedness": null,
+      "relevance": null,
+      "correctness": null,
+      "tone": null,
+      "actionability": null
+    }
+  },
+  {
+    "tweet_id": 2287426,
+    "message": "@AppleSupport It appears to be functioning properly now after restarting as normal... Phew.\n\nApologies for swearing and being mad - it really stuffed ",
+    "intent": "app_malfunction",
+    "reply": "We're so glad the restart got things back to normal, and we completely understand how frustrating a disrupted morning can be. Several similar resolved cases suggest that a simple restart often clears ",
+    "llm_score": {
+      "groundedness": 2,
+      "relevance": 4,
+      "correctness": 5,
+      "tone": 4,
+      "actionability": 2,
+      "tweet_id": 2287426
+    },
+    "human_score": {
+      "groundedness": null,
+      "relevance": null,
+      "correctness": null,
+      "tone": null,
+      "actionability": null
+    }
+  },
+  {
+    "tweet_id": 569251,
+    "message": "@AppleSupport You have no idea how mad I am that copy and paste was the answer all along. Nevertheless, thank you!",
+    "intent": "unclear",
+    "reply": "We'd like to help you with this. Could you provide a bit more detail about the issue you're experiencing? You can also DM us for more personalized support.",
+    "llm_score": {
+      "groundedness": 1,
+      "relevance": 1,
+      "correctness": 3,
+      "tone": 2,
+      "actionability": 2,
+      "tweet_id": 569251
+    },
+    "human_score": {
+      "groundedness": null,
+      "relevance": null,
+      "correctness": null,
+      "tone": null,
+      "actionability": null
+    }
+  },
+  {
+    "tweet_id": 553667,
+    "message": "@AppleSupport yes, i already tried restarting.",
+    "intent": "unclear",
+    "reply": "We'd like to help you with this. Could you provide a bit more detail about the issue you're experiencing? You can also DM us for more personalized support.",
+    "llm_score": {
+      "groundedness": 1,
+      "relevance": 2,
+      "correctness": 4,
+      "tone": 2,
+      "actionability": 2,
+      "tweet_id": 553667
+    },
+    "human_score": {
+      "groundedness": null,
+      "relevance": null,
+      "correctness": null,
+      "tone": null,
+      "actionability": null
+    }
+  },
+  {
+    "tweet_id": 2271618,
+    "message": "@AppleSupport I have been yes. This seems to pop up from time to time and resists restarting and signing out and in as well. Absolutely infuriating.",
+    "intent": "unclear",
+    "reply": "We'd like to help you with this. Could you provide a bit more detail about the issue you're experiencing? You can also DM us for more personalized support.",
+    "llm_score": {
+      "groundedness": 1,
+      "relevance": 2,
+      "correctness": 3,
+      "tone": 2,
+      "actionability": 2,
+      "tweet_id": 2271618
+    },
+    "human_score": {
+      "groundedness": null,
+      "relevance": null,
+      "correctness": null,
+      "tone": null,
+      "actionability": null
+    }
+  },
+  {
+    "tweet_id": 1120569,
+    "message": "@AppleSupport shit\u2026\u2026iOS 11.0.3 https://t.co/0TQPF7a0S1",
+    "intent": "ios_update_issues",
+    "reply": "We'd like to help you with this. Could you provide a bit more detail about the issue you're experiencing? You can also DM us for more personalized support.",
+    "llm_score": {
+      "groundedness": 1,
+      "relevance": 2,
+      "correctness": 3,
+      "tone": 3,
+      "actionability": 3,
+      "tweet_id": 1120569
+    },
+    "human_score": {
+      "groundedness": null,
+      "relevance": null,
+      "correctness": null,
+      "tone": null,
+      "actionability": null
+    }
+  },
+  {
+    "tweet_id": 1721276,
+    "message": "@AppleSupport Lol..yes it is.  But that\u2019s not what I\u2019m referring to. This speed of drainage is a new phenomenon for my phone.",
+    "intent": "battery_drain_after_update",
+    "reply": "We'd like to help you with this. Could you provide a bit more detail about the issue you're experiencing? You can also DM us for more personalized support.",
+    "llm_score": {
+      "groundedness": 1,
+      "relevance": 2,
+      "correctness": 2,
+      "tone": 2,
+      "actionability": 2,
+      "tweet_id": 1721276
+    },
+    "human_score": {
+      "groundedness": null,
+      "relevance": null,
+      "correctness": null,
+      "tone": null,
+      "actionability": null
+    }
+  },
+  {
+    "tweet_id": 1411640,
+    "message": "@AppleSupport Oh well it\u2019s just not charging properly and it\u2019s hooked up to my MacBook",
+    "intent": "battery_drain_after_update",
+    "reply": "We'd like to help you with this. Could you provide a bit more detail about the issue you're experiencing? You can also DM us for more personalized support.",
+    "llm_score": {
+      "groundedness": 1,
+      "relevance": 2,
+      "correctness": 3,
+      "tone": 4,
+      "actionability": 3,
+      "tweet_id": 1411640
+    },
+    "human_score": {
+      "groundedness": null,
+      "relevance": null,
+      "correctness": null,
+      "tone": null,
+      "actionability": null
+    }
+  },
+  {
+    "tweet_id": 757177,
+    "message": "@AppleSupport Not yet. On 11.0.2. Battery drain galore since iOS 11.",
+    "intent": "battery_drain_after_update",
+    "reply": "We'd like to help you with this. Could you provide a bit more detail about the issue you're experiencing? You can also DM us for more personalized support.",
+    "llm_score": {
+      "groundedness": 1,
+      "relevance": 2,
+      "correctness": 4,
+      "tone": 3,
+      "actionability": 3,
+      "tweet_id": 757177
+    },
+    "human_score": {
+      "groundedness": null,
+      "relevance": null,
+      "correctness": null,
+      "tone": null,
+      "actionability": null
+    }
+  },
+  {
+    "tweet_id": 2307956,
+    "message": "@AppleSupport Hi version 10.2. Trying to do it wirelessly. Don't have a laptop! :(.",
+    "intent": "ios_update_issues",
+    "reply": "We'd like to help you with this. Could you provide a bit more detail about the issue you're experiencing? You can also DM us for more personalized support.",
+    "llm_score": {
+      "groundedness": 1,
+      "relevance": 2,
+      "correctness": 2,
+      "tone": 3,
+      "actionability": 2,
+      "tweet_id": 2307956
+    },
+    "human_score": {
+      "groundedness": null,
+      "relevance": null,
+      "correctness": null,
+      "tone": null,
+      "actionability": null
+    }
+  },
+  {
+    "tweet_id": 33315,
+    "message": "@AppleSupport Battery dies fast as hell now. Phone always is freezing up and I end up having to wait like 15 minutes for it to get unfreeze",
+    "intent": "battery_drain_after_update",
+    "reply": "We'd like to help you with this. Could you provide a bit more detail about the issue you're experiencing? You can also DM us for more personalized support.",
+    "llm_score": {
+      "groundedness": 1,
+      "relevance": 1,
+      "correctness": 2,
+      "tone": 2,
+      "actionability": 2,
+      "tweet_id": 33315
+    },
+    "human_score": {
+      "groundedness": null,
+      "relevance": null,
+      "correctness": null,
+      "tone": null,
+      "actionability": null
+    }
+  },
+  {
+    "tweet_id": 944214,
+    "message": "@AppleSupport Restarting doesn\u2019t/hasn\u2019t helped. Getting new email doesn\u2019t change the notification either. Perpetually stuck at 1",
+    "intent": "device_crash_freeze",
+    "reply": "We'd like to help you with this. Could you provide a bit more detail about the issue you're experiencing? You can also DM us for more personalized support.",
+    "llm_score": {
+      "groundedness": 1,
+      "relevance": 1,
+      "correctness": 2,
+      "tone": 2,
+      "actionability": 2,
+      "tweet_id": 944214
+    },
+    "human_score": {
+      "groundedness": null,
+      "relevance": null,
+      "correctness": null,
+      "tone": null,
+      "actionability": null
+    }
+  },
+  {
+    "tweet_id": 1334356,
+    "message": "@AppleSupport All 32-bit apps don't work with iOS 11. Frustrating! It would be a consolation if we could use them in previous devices/iOS! Thank you!!",
+    "intent": "ios_update_issues",
+    "reply": "We'd like to help you with this. Could you provide a bit more detail about the issue you're experiencing? You can also DM us for more personalized support.",
+    "llm_score": {
+      "groundedness": 1,
+      "relevance": 2,
+      "correctness": 3,
+      "tone": 3,
+      "actionability": 2,
+      "tweet_id": 1334356
+    },
+    "human_score": {
+      "groundedness": null,
+      "relevance": null,
+      "correctness": null,
+      "tone": null,
+      "actionability": null
+    }
+  },
+  {
+    "tweet_id": 2295658,
+    "message": "@AppleSupport Yes. I have 11.1.1. \nI updated it on Saturday. Two days back. Since then, I\u2019ve had to charge my phone at least 5 times in a day.",
+    "intent": "battery_drain_after_update",
+    "reply": "We'd like to help you with this. Could you provide a bit more detail about the issue you're experiencing? You can also DM us for more personalized support.",
+    "llm_score": {
+      "groundedness": 1,
+      "relevance": 2,
+      "correctness": 2,
+      "tone": 3,
+      "actionability": 1,
+      "tweet_id": 2295658
+    },
+    "human_score": {
+      "groundedness": null,
+      "relevance": null,
+      "correctness": null,
+      "tone": null,
+      "actionability": null
+    }
+  },
+  {
+    "tweet_id": 1120564,
+    "message": "@AppleSupport Since upgrading to 11.0.3, I can literally watch my battery percentage tick down while using my phone. This is madness! #wtf",
+    "intent": "battery_drain_after_update",
+    "reply": "We'd like to help you with this. Could you provide a bit more detail about the issue you're experiencing? You can also DM us for more personalized support.",
+    "llm_score": {
+      "groundedness": 1,
+      "relevance": 2,
+      "correctness": 2,
+      "tone": 3,
+      "actionability": 3,
+      "tweet_id": 1120564
+    },
+    "human_score": {
+      "groundedness": null,
+      "relevance": null,
+      "correctness": null,
+      "tone": null,
+      "actionability": null
+    }
+  },
+  {
+    "tweet_id": 902987,
+    "message": "@AppleSupport Have power cycled, toggled VO and zoom on@and off, hard reset; all no go. Want to avoid wipe.",
+    "intent": "app_malfunction",
+    "reply": "We'd like to help you with this. Could you provide a bit more detail about the issue you're experiencing? You can also DM us for more personalized support.",
+    "llm_score": {
+      "groundedness": 1,
+      "relevance": 2,
+      "correctness": 3,
+      "tone": 3,
+      "actionability": 2,
+      "tweet_id": 902987
+    },
+    "human_score": {
+      "groundedness": null,
+      "relevance": null,
+      "correctness": null,
+      "tone": null,
+      "actionability": null
+    }
+  },
+  {
+    "tweet_id": 1924729,
+    "message": "@AppleSupport Yes i am",
+    "intent": "unclear",
+    "reply": "We'd like to help you with this. Could you provide a bit more detail about the issue you're experiencing? You can also DM us for more personalized support.",
+    "llm_score": {
+      "groundedness": 1,
+      "relevance": 2,
+      "correctness": 4,
+      "tone": 3,
+      "actionability": 3,
+      "tweet_id": 1924729
+    },
+    "human_score": {
+      "groundedness": null,
+      "relevance": null,
+      "correctness": null,
+      "tone": null,
+      "actionability": null
+    }
+  }
+]

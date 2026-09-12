@@ -1,0 +1,205 @@
+{
+  "last_completed_index": 24,
+  "scores": [
+    {
+      "groundedness": 5,
+      "relevance": 5,
+      "correctness": 5,
+      "tone": 5,
+      "actionability": 5,
+      "tweet_id": 2636991
+    },
+    {
+      "groundedness": 5,
+      "relevance": 4,
+      "correctness": 3,
+      "tone": 4,
+      "actionability": 4,
+      "tweet_id": 1772596
+    },
+    {
+      "groundedness": 5,
+      "relevance": 5,
+      "correctness": 5,
+      "tone": 5,
+      "actionability": 5,
+      "tweet_id": 2802414
+    },
+    {
+      "groundedness": 5,
+      "relevance": 5,
+      "correctness": 5,
+      "tone": 5,
+      "actionability": 5,
+      "tweet_id": 2372229
+    },
+    {
+      "groundedness": 5,
+      "relevance": 5,
+      "correctness": 5,
+      "tone": 5,
+      "actionability": 5,
+      "tweet_id": 1326038
+    },
+    {
+      "groundedness": 5,
+      "relevance": 3,
+      "correctness": 4,
+      "tone": 5,
+      "actionability": 5,
+      "tweet_id": 945681
+    },
+    {
+      "groundedness": 5,
+      "relevance": 5,
+      "correctness": 5,
+      "tone": 5,
+      "actionability": 5,
+      "tweet_id": 2869719
+    },
+    {
+      "groundedness": 4,
+      "relevance": 5,
+      "correctness": 4,
+      "tone": 5,
+      "actionability": 5,
+      "tweet_id": 1181715
+    },
+    {
+      "groundedness": 5,
+      "relevance": 5,
+      "correctness": 4,
+      "tone": 5,
+      "actionability": 5,
+      "tweet_id": 1225230
+    },
+    {
+      "groundedness": 5,
+      "relevance": 5,
+      "correctness": 5,
+      "tone": 5,
+      "actionability": 4,
+      "tweet_id": 2287426
+    },
+    {
+      "groundedness": 5,
+      "relevance": 5,
+      "correctness": 5,
+      "tone": 5,
+      "actionability": 5,
+      "tweet_id": 569251
+    },
+    {
+      "groundedness": 5,
+      "relevance": 5,
+      "correctness": 5,
+      "tone": 5,
+      "actionability": 5,
+      "tweet_id": 553667
+    },
+    {
+      "groundedness": 5,
+      "relevance": 5,
+      "correctness": 4,
+      "tone": 5,
+      "actionability": 5,
+      "tweet_id": 2271618
+    },
+    {
+      "groundedness": 5,
+      "relevance": 5,
+      "correctness": 4,
+      "tone": 5,
+      "actionability": 5,
+      "tweet_id": 1120569
+    },
+    {
+      "groundedness": 5,
+      "relevance": 5,
+      "correctness": 5,
+      "tone": 5,
+      "actionability": 5,
+      "tweet_id": 1721276
+    },
+    {
+      "groundedness": 4,
+      "relevance": 5,
+      "correctness": 4,
+      "tone": 5,
+      "actionability": 5,
+      "tweet_id": 1411640
+    },
+    {
+      "groundedness": 5,
+      "relevance": 5,
+      "correctness": 5,
+      "tone": 5,
+      "actionability": 5,
+      "tweet_id": 757177
+    },
+    {
+      "groundedness": 5,
+      "relevance": 5,
+      "correctness": 5,
+      "tone": 5,
+      "actionability": 5,
+      "tweet_id": 2307956
+    },
+    {
+      "groundedness": 5,
+      "relevance": 5,
+      "correctness": 4,
+      "tone": 5,
+      "actionability": 5,
+      "tweet_id": 33315
+    },
+    {
+      "groundedness": 4,
+      "relevance": 3,
+      "correctness": 4,
+      "tone": 5,
+      "actionability": 5,
+      "tweet_id": 944214
+    },
+    {
+      "groundedness": 5,
+      "relevance": 5,
+      "correctness": 5,
+      "tone": 5,
+      "actionability": 4,
+      "tweet_id": 1334356
+    },
+    {
+      "groundedness": 4,
+      "relevance": 5,
+      "correctness": 5,
+      "tone": 5,
+      "actionability": 5,
+      "tweet_id": 2295658
+    },
+    {
+      "groundedness": 4,
+      "relevance": 5,
+      "correctness": 5,
+      "tone": 5,
+      "actionability": 5,
+      "tweet_id": 1120564
+    },
+    {
+      "groundedness": 5,
+      "relevance": 5,
+      "correctness": 4,
+      "tone": 5,
+      "actionability": 5,
+      "tweet_id": 902987
+    },
+    {
+      "groundedness": 5,
+      "relevance": 5,
+      "correctness": 5,
+      "tone": 5,
+      "actionability": 5,
+      "tweet_id": 1924729
+    }
+  ]
+}

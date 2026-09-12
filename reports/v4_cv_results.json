@@ -1,0 +1,1002 @@
+{
+  "protocol": {
+    "dev_size": 170,
+    "n_splits": 5,
+    "seed": 42,
+    "selection_metric": "macro_f1_mean",
+    "input": "text field only",
+    "frozen_test_touched": false
+  },
+  "supervised": {
+    "tfidf_lr": {
+      "0.5": {
+        "accuracy_mean": 0.5647058823529412,
+        "accuracy_std": 0.0819316957481419,
+        "macro_f1_mean": 0.5067354432060314,
+        "macro_f1_std": 0.09285783996962832,
+        "per_intent_f1_mean": {
+          "ios_update_issues": 0.6907002801120449,
+          "battery_drain_after_update": 0.572979797979798,
+          "device_crash_freeze": 0.2,
+          "app_malfunction": 0.4401731601731601,
+          "account_access": 0.6873669467787116,
+          "unclear": 0.4491924741924742
+        },
+        "per_intent_f1_std": {
+          "ios_update_issues": 0.096408429533389,
+          "battery_drain_after_update": 0.1064399181601575,
+          "device_crash_freeze": 0.24494897427831783,
+          "app_malfunction": 0.19739166066764327,
+          "account_access": 0.05109173054698618,
+          "unclear": 0.2049445666305557
+        },
+        "folds": [
+          {
+            "accuracy": 0.5,
+            "macro_f1": 0.4307783719548426,
+            "per_intent_f1": {
+              "ios_update_issues": 0.8333333333333334,
+              "battery_drain_after_update": 0.5,
+              "device_crash_freeze": 0.0,
+              "app_malfunction": 0.18181818181818182,
+              "account_access": 0.7058823529411765,
+              "unclear": 0.36363636363636365
+            },
+            "fold": 0
+          },
+          {
+            "accuracy": 0.6470588235294118,
+            "macro_f1": 0.5615079365079364,
+            "per_intent_f1": {
+              "ios_update_issues": 0.6666666666666666,
+              "battery_drain_after_update": 0.75,
+              "device_crash_freeze": 0.0,
+              "app_malfunction": 0.6666666666666666,
+              "account_access": 0.7142857142857143,
+              "unclear": 0.5714285714285714
+            },
+            "fold": 1
+          },
+          {
+            "accuracy": 0.6764705882352942,
+            "macro_f1": 0.6407712657712658,
+            "per_intent_f1": {
+              "ios_update_issues": 0.7142857142857143,
+              "battery_drain_after_update": 0.4444444444444444,
+              "device_crash_freeze": 0.5,
+              "app_malfunction": 0.6666666666666666,
+              "account_access": 0.75,
+              "unclear": 0.7692307692307693
+            },
+            "fold": 2
+          },
+          {
+            "accuracy": 0.47058823529411764,
+            "macro_f1": 0.379563492063492,
+            "per_intent_f1": {
+              "ios_update_issues": 0.5333333333333333,
+              "battery_drain_after_update": 0.625,
+              "device_crash_freeze": 0.0,
+              "app_malfunction": 0.2857142857142857,
+              "account_access": 0.6666666666666666,
+              "unclear": 0.16666666666666666
+            },
+            "fold": 3
+          },
+          {
+            "accuracy": 0.5294117647058824,
+            "macro_f1": 0.5210561497326204,
+            "per_intent_f1": {
+              "ios_update_issues": 0.7058823529411765,
+              "battery_drain_after_update": 0.5454545454545454,
+              "device_crash_freeze": 0.5,
+              "app_malfunction": 0.4,
+              "account_access": 0.6,
+              "unclear": 0.375
+            },
+            "fold": 4
+          }
+        ]
+      },
+      "1.0": {
+        "accuracy_mean": 0.5764705882352941,
+        "accuracy_std": 0.08645257915705337,
+        "macro_f1_mean": 0.5178676225735048,
+        "macro_f1_std": 0.10062172702981,
+        "per_intent_f1_mean": {
+          "ios_update_issues": 0.6907002801120449,
+          "battery_drain_after_update": 0.6183443027560676,
+          "device_crash_freeze": 0.2,
+          "app_malfunction": 0.4401731601731601,
+          "account_access": 0.7197845291962939,
+          "unclear": 0.43820346320346315
+        },
+        "per_intent_f1_std": {
+          "ios_update_issues": 0.096408429533389,
+          "battery_drain_after_update": 0.051701834490531076,
+          "device_crash_freeze": 0.24494897427831783,
+          "app_malfunction": 0.19739166066764327,
+          "account_access": 0.08794924919400401,
+          "unclear": 0.18828568761138584
+        },
+        "folds": [
+          {
+            "accuracy": 0.5294117647058824,
+            "macro_f1": 0.4500091411856118,
+            "per_intent_f1": {
+              "ios_update_issues": 0.8333333333333334,
+              "battery_drain_after_update": 0.6153846153846154,
+              "device_crash_freeze": 0.0,
+              "app_malfunction": 0.18181818181818182,
+              "account_access": 0.7058823529411765,
+              "unclear": 0.36363636363636365
+            },
+            "fold": 0
+          },
+          {
+            "accuracy": 0.6470588235294118,
+            "macro_f1": 0.563312504488975,
+            "per_intent_f1": {
+              "ios_update_issues": 0.6666666666666666,
+              "battery_drain_after_update": 0.7058823529411765,
+              "device_crash_freeze": 0.0,
+              "app_malfunction": 0.6666666666666666,
+              "account_access": 0.7692307692307693,
+              "unclear": 0.5714285714285714
+            },
+            "fold": 1
+          },
+          {
+            "accuracy": 0.7058823529411765,
+            "macro_f1": 0.6753968253968253,
+            "per_intent_f1": {
+              "ios_update_issues": 0.7142857142857143,
+              "battery_drain_after_update": 0.6,
+              "device_crash_freeze": 0.5,
+              "app_malfunction": 0.6666666666666666,
+              "account_access": 0.8571428571428571,
+              "unclear": 0.7142857142857143
+            },
+            "fold": 2
+          },
+          {
+            "accuracy": 0.47058823529411764,
+            "macro_f1": 0.379563492063492,
+            "per_intent_f1": {
+              "ios_update_issues": 0.5333333333333333,
+              "battery_drain_after_update": 0.625,
+              "device_crash_freeze": 0.0,
+              "app_malfunction": 0.2857142857142857,
+              "account_access": 0.6666666666666666,
+              "unclear": 0.16666666666666666
+            },
+            "fold": 3
+          },
+          {
+            "accuracy": 0.5294117647058824,
+            "macro_f1": 0.5210561497326204,
+            "per_intent_f1": {
+              "ios_update_issues": 0.7058823529411765,
+              "battery_drain_after_update": 0.5454545454545454,
+              "device_crash_freeze": 0.5,
+              "app_malfunction": 0.4,
+              "account_access": 0.6,
+              "unclear": 0.375
+            },
+            "fold": 4
+          }
+        ]
+      },
+      "2.0": {
+        "accuracy_mean": 0.6,
+        "accuracy_std": 0.07803823036130354,
+        "macro_f1_mean": 0.5232258917553035,
+        "macro_f1_std": 0.0762837097205303,
+        "per_intent_f1_mean": {
+          "ios_update_issues": 0.7422021116138764,
+          "battery_drain_after_update": 0.6566776360894008,
+          "device_crash_freeze": 0.1,
+          "app_malfunction": 0.43355311355311354,
+          "account_access": 0.7331178625296272,
+          "unclear": 0.47380462674580326
+        },
+        "per_intent_f1_std": {
+          "ios_update_issues": 0.10877839765961093,
+          "battery_drain_after_update": 0.07114160238214258,
+          "device_crash_freeze": 0.2,
+          "app_malfunction": 0.18162258174563267,
+          "account_access": 0.07247018306171825,
+          "unclear": 0.20471821397111295
+        },
+        "folds": [
+          {
+            "accuracy": 0.5588235294117647,
+            "macro_f1": 0.4679967091731798,
+            "per_intent_f1": {
+              "ios_update_issues": 0.9230769230769231,
+              "battery_drain_after_update": 0.6153846153846154,
+              "device_crash_freeze": 0.0,
+              "app_malfunction": 0.2,
+              "account_access": 0.7058823529411765,
+              "unclear": 0.36363636363636365
+            },
+            "fold": 0
+          },
+          {
+            "accuracy": 0.6764705882352942,
+            "macro_f1": 0.5865384615384615,
+            "per_intent_f1": {
+              "ios_update_issues": 0.6666666666666666,
+              "battery_drain_after_update": 0.75,
+              "device_crash_freeze": 0.0,
+              "app_malfunction": 0.6666666666666666,
+              "account_access": 0.7692307692307693,
+              "unclear": 0.6666666666666666
+            },
+            "fold": 1
+          },
+          {
+            "accuracy": 0.7058823529411765,
+            "macro_f1": 0.608913308913309,
+            "per_intent_f1": {
+              "ios_update_issues": 0.8,
+              "battery_drain_after_update": 0.6666666666666666,
+              "device_crash_freeze": 0.0,
+              "app_malfunction": 0.6153846153846154,
+              "account_access": 0.8571428571428571,
+              "unclear": 0.7142857142857143
+            },
+            "fold": 2
+          },
+          {
+            "accuracy": 0.5,
+            "macro_f1": 0.4045823457588163,
+            "per_intent_f1": {
+              "ios_update_issues": 0.6153846153846154,
+              "battery_drain_after_update": 0.7058823529411765,
+              "device_crash_freeze": 0.0,
+              "app_malfunction": 0.2857142857142857,
+              "account_access": 0.6666666666666666,
+              "unclear": 0.15384615384615385
+            },
+            "fold": 3
+          },
+          {
+            "accuracy": 0.5588235294117647,
+            "macro_f1": 0.548098633392751,
+            "per_intent_f1": {
+              "ios_update_issues": 0.7058823529411765,
+              "battery_drain_after_update": 0.5454545454545454,
+              "device_crash_freeze": 0.5,
+              "app_malfunction": 0.4,
+              "account_access": 0.6666666666666666,
+              "unclear": 0.47058823529411764
+            },
+            "fold": 4
+          }
+        ]
+      },
+      "4.0": {
+        "accuracy_mean": 0.5941176470588235,
+        "accuracy_std": 0.07058823529411766,
+        "macro_f1_mean": 0.5160708246002363,
+        "macro_f1_std": 0.07285772856417043,
+        "per_intent_f1_mean": {
+          "ios_update_issues": 0.711872441284206,
+          "battery_drain_after_update": 0.6433443027560675,
+          "device_crash_freeze": 0.1,
+          "app_malfunction": 0.44380952380952376,
+          "account_access": 0.7331178625296272,
+          "unclear": 0.46428081722199366
+        },
+        "per_intent_f1_std": {
+          "ios_update_issues": 0.08062091710503423,
+          "battery_drain_after_update": 0.07420151313742122,
+          "device_crash_freeze": 0.2,
+          "app_malfunction": 0.19271070278006458,
+          "account_access": 0.07247018306171825,
+          "unclear": 0.19414367560981285
+        },
+        "folds": [
+          {
+            "accuracy": 0.5588235294117647,
+            "macro_f1": 0.4570076981841688,
+            "per_intent_f1": {
+              "ios_update_issues": 0.8571428571428571,
+              "battery_drain_after_update": 0.6153846153846154,
+              "device_crash_freeze": 0.0,
+              "app_malfunction": 0.2,
+              "account_access": 0.7058823529411765,
+              "unclear": 0.36363636363636365
+            },
+            "fold": 0
+          },
+          {
+            "accuracy": 0.6764705882352942,
+            "macro_f1": 0.5865384615384615,
+            "per_intent_f1": {
+              "ios_update_issues": 0.6666666666666666,
+              "battery_drain_after_update": 0.75,
+              "device_crash_freeze": 0.0,
+              "app_malfunction": 0.6666666666666666,
+              "account_access": 0.7692307692307693,
+              "unclear": 0.6666666666666666
+            },
+            "fold": 1
+          },
+          {
+            "accuracy": 0.6764705882352942,
+            "macro_f1": 0.5841269841269842,
+            "per_intent_f1": {
+              "ios_update_issues": 0.7142857142857143,
+              "battery_drain_after_update": 0.6,
+              "device_crash_freeze": 0.0,
+              "app_malfunction": 0.6666666666666666,
+              "account_access": 0.8571428571428571,
+              "unclear": 0.6666666666666666
+            },
+            "fold": 2
+          },
+          {
+            "accuracy": 0.5,
+            "macro_f1": 0.4045823457588163,
+            "per_intent_f1": {
+              "ios_update_issues": 0.6153846153846154,
+              "battery_drain_after_update": 0.7058823529411765,
+              "device_crash_freeze": 0.0,
+              "app_malfunction": 0.2857142857142857,
+              "account_access": 0.6666666666666666,
+              "unclear": 0.15384615384615385
+            },
+            "fold": 3
+          },
+          {
+            "accuracy": 0.5588235294117647,
+            "macro_f1": 0.548098633392751,
+            "per_intent_f1": {
+              "ios_update_issues": 0.7058823529411765,
+              "battery_drain_after_update": 0.5454545454545454,
+              "device_crash_freeze": 0.5,
+              "app_malfunction": 0.4,
+              "account_access": 0.6666666666666666,
+              "unclear": 0.47058823529411764
+            },
+            "fold": 4
+          }
+        ]
+      }
+    },
+    "bge_lr": {
+      "0.5": {
+        "accuracy_mean": 0.6294117647058823,
+        "accuracy_std": 0.09593827311941232,
+        "macro_f1_mean": 0.5766023573376514,
+        "macro_f1_std": 0.08693888179332725,
+        "per_intent_f1_mean": {
+          "ios_update_issues": 0.6786630036630037,
+          "battery_drain_after_update": 0.7030079724197372,
+          "device_crash_freeze": 0.3929004329004329,
+          "app_malfunction": 0.23555555555555552,
+          "account_access": 0.8647435897435898,
+          "unclear": 0.5847435897435898
+        },
+        "per_intent_f1_std": {
+          "ios_update_issues": 0.19771068633388128,
+          "battery_drain_after_update": 0.13025753515371746,
+          "device_crash_freeze": 0.08764778886272317,
+          "app_malfunction": 0.19555555555555554,
+          "account_access": 0.058343898733244894,
+          "unclear": 0.2001266857150883
+        },
+        "folds": [
+          {
+            "accuracy": 0.7352941176470589,
+            "macro_f1": 0.6818732193732192,
+            "per_intent_f1": {
+              "ios_update_issues": 0.9230769230769231,
+              "battery_drain_after_update": 0.8333333333333334,
+              "device_crash_freeze": 0.4,
+              "app_malfunction": 0.4444444444444444,
+              "account_access": 0.875,
+              "unclear": 0.6153846153846154
+            },
+            "fold": 0
+          },
+          {
+            "accuracy": 0.6764705882352942,
+            "macro_f1": 0.6136788048552755,
+            "per_intent_f1": {
+              "ios_update_issues": 0.8571428571428571,
+              "battery_drain_after_update": 0.7058823529411765,
+              "device_crash_freeze": 0.2857142857142857,
+              "app_malfunction": 0.3333333333333333,
+              "account_access": 0.8333333333333334,
+              "unclear": 0.6666666666666666
+            },
+            "fold": 1
+          },
+          {
+            "accuracy": 0.7058823529411765,
+            "macro_f1": 0.6350330225330225,
+            "per_intent_f1": {
+              "ios_update_issues": 0.6666666666666666,
+              "battery_drain_after_update": 0.8,
+              "device_crash_freeze": 0.5454545454545454,
+              "app_malfunction": 0.0,
+              "account_access": 0.9230769230769231,
+              "unclear": 0.875
+            },
+            "fold": 2
+          },
+          {
+            "accuracy": 0.5,
+            "macro_f1": 0.446504884004884,
+            "per_intent_f1": {
+              "ios_update_issues": 0.375,
+              "battery_drain_after_update": 0.7142857142857143,
+              "device_crash_freeze": 0.4,
+              "app_malfunction": 0.0,
+              "account_access": 0.9230769230769231,
+              "unclear": 0.26666666666666666
+            },
+            "fold": 3
+          },
+          {
+            "accuracy": 0.5294117647058824,
+            "macro_f1": 0.5059218559218559,
+            "per_intent_f1": {
+              "ios_update_issues": 0.5714285714285714,
+              "battery_drain_after_update": 0.46153846153846156,
+              "device_crash_freeze": 0.3333333333333333,
+              "app_malfunction": 0.4,
+              "account_access": 0.7692307692307693,
+              "unclear": 0.5
+            },
+            "fold": 4
+          }
+        ]
+      },
+      "1.0": {
+        "accuracy_mean": 0.6117647058823529,
+        "accuracy_std": 0.10910139406465535,
+        "macro_f1_mean": 0.5554290861643801,
+        "macro_f1_std": 0.11063959753184015,
+        "per_intent_f1_mean": {
+          "ios_update_issues": 0.6786630036630037,
+          "battery_drain_after_update": 0.7030079724197372,
+          "device_crash_freeze": 0.28380952380952384,
+          "app_malfunction": 0.23555555555555552,
+          "account_access": 0.8467948717948719,
+          "unclear": 0.5847435897435898
+        },
+        "per_intent_f1_std": {
+          "ios_update_issues": 0.19771068633388128,
+          "battery_drain_after_update": 0.13025753515371746,
+          "device_crash_freeze": 0.14832702730614694,
+          "app_malfunction": 0.19555555555555554,
+          "account_access": 0.05097665474890011,
+          "unclear": 0.2001266857150883
+        },
+        "folds": [
+          {
+            "accuracy": 0.7352941176470589,
+            "macro_f1": 0.6818732193732192,
+            "per_intent_f1": {
+              "ios_update_issues": 0.9230769230769231,
+              "battery_drain_after_update": 0.8333333333333334,
+              "device_crash_freeze": 0.4,
+              "app_malfunction": 0.4444444444444444,
+              "account_access": 0.875,
+              "unclear": 0.6153846153846154
+            },
+            "fold": 0
+          },
+          {
+            "accuracy": 0.6764705882352942,
+            "macro_f1": 0.6136788048552755,
+            "per_intent_f1": {
+              "ios_update_issues": 0.8571428571428571,
+              "battery_drain_after_update": 0.7058823529411765,
+              "device_crash_freeze": 0.2857142857142857,
+              "app_malfunction": 0.3333333333333333,
+              "account_access": 0.8333333333333334,
+              "unclear": 0.6666666666666666
+            },
+            "fold": 1
+          },
+          {
+            "accuracy": 0.6764705882352942,
+            "macro_f1": 0.6107905982905982,
+            "per_intent_f1": {
+              "ios_update_issues": 0.6666666666666666,
+              "battery_drain_after_update": 0.8,
+              "device_crash_freeze": 0.4,
+              "app_malfunction": 0.0,
+              "account_access": 0.9230769230769231,
+              "unclear": 0.875
+            },
+            "fold": 2
+          },
+          {
+            "accuracy": 0.4411764705882353,
+            "macro_f1": 0.3648809523809524,
+            "per_intent_f1": {
+              "ios_update_issues": 0.375,
+              "battery_drain_after_update": 0.7142857142857143,
+              "device_crash_freeze": 0.0,
+              "app_malfunction": 0.0,
+              "account_access": 0.8333333333333334,
+              "unclear": 0.26666666666666666
+            },
+            "fold": 3
+          },
+          {
+            "accuracy": 0.5294117647058824,
+            "macro_f1": 0.5059218559218559,
+            "per_intent_f1": {
+              "ios_update_issues": 0.5714285714285714,
+              "battery_drain_after_update": 0.46153846153846156,
+              "device_crash_freeze": 0.3333333333333333,
+              "app_malfunction": 0.4,
+              "account_access": 0.7692307692307693,
+              "unclear": 0.5
+            },
+            "fold": 4
+          }
+        ]
+      },
+      "2.0": {
+        "accuracy_mean": 0.6352941176470589,
+        "accuracy_std": 0.1140630554686195,
+        "macro_f1_mean": 0.5951877534230475,
+        "macro_f1_std": 0.11590376069152054,
+        "per_intent_f1_mean": {
+          "ios_update_issues": 0.6552530802530802,
+          "battery_drain_after_update": 0.72585179526356,
+          "device_crash_freeze": 0.29333333333333333,
+          "app_malfunction": 0.4027272727272727,
+          "account_access": 0.8864335664335664,
+          "unclear": 0.6075274725274726
+        },
+        "per_intent_f1_std": {
+          "ios_update_issues": 0.16459566030103343,
+          "battery_drain_after_update": 0.1346225206876586,
+          "device_crash_freeze": 0.14966629547095767,
+          "app_malfunction": 0.1837308487799162,
+          "account_access": 0.04403396054918321,
+          "unclear": 0.21611361827265352
+        },
+        "folds": [
+          {
+            "accuracy": 0.7647058823529411,
+            "macro_f1": 0.7126262626262626,
+            "per_intent_f1": {
+              "ios_update_issues": 0.8333333333333334,
+              "battery_drain_after_update": 0.9090909090909091,
+              "device_crash_freeze": 0.4,
+              "app_malfunction": 0.4,
+              "account_access": 0.9333333333333333,
+              "unclear": 0.8
+            },
+            "fold": 0
+          },
+          {
+            "accuracy": 0.7058823529411765,
+            "macro_f1": 0.6804869966634671,
+            "per_intent_f1": {
+              "ios_update_issues": 0.7692307692307693,
+              "battery_drain_after_update": 0.7058823529411765,
+              "device_crash_freeze": 0.3333333333333333,
+              "app_malfunction": 0.75,
+              "account_access": 0.9090909090909091,
+              "unclear": 0.6153846153846154
+            },
+            "fold": 1
+          },
+          {
+            "accuracy": 0.7058823529411765,
+            "macro_f1": 0.662558275058275,
+            "per_intent_f1": {
+              "ios_update_issues": 0.7272727272727273,
+              "battery_drain_after_update": 0.8,
+              "device_crash_freeze": 0.4,
+              "app_malfunction": 0.25,
+              "account_access": 0.9230769230769231,
+              "unclear": 0.875
+            },
+            "fold": 2
+          },
+          {
+            "accuracy": 0.47058823529411764,
+            "macro_f1": 0.40972222222222227,
+            "per_intent_f1": {
+              "ios_update_issues": 0.375,
+              "battery_drain_after_update": 0.7142857142857143,
+              "device_crash_freeze": 0.0,
+              "app_malfunction": 0.25,
+              "account_access": 0.8333333333333334,
+              "unclear": 0.2857142857142857
+            },
+            "fold": 3
+          },
+          {
+            "accuracy": 0.5294117647058824,
+            "macro_f1": 0.5105450105450106,
+            "per_intent_f1": {
+              "ios_update_issues": 0.5714285714285714,
+              "battery_drain_after_update": 0.5,
+              "device_crash_freeze": 0.3333333333333333,
+              "app_malfunction": 0.36363636363636365,
+              "account_access": 0.8333333333333334,
+              "unclear": 0.46153846153846156
+            },
+            "fold": 4
+          }
+        ]
+      },
+      "4.0": {
+        "accuracy_mean": 0.6294117647058824,
+        "accuracy_std": 0.12282713539894766,
+        "macro_f1_mean": 0.5904787587140529,
+        "macro_f1_std": 0.1223691570809652,
+        "per_intent_f1_mean": {
+          "ios_update_issues": 0.6431318681318681,
+          "battery_drain_after_update": 0.72585179526356,
+          "device_crash_freeze": 0.3022222222222222,
+          "app_malfunction": 0.4027272727272727,
+          "account_access": 0.8652214452214452,
+          "unclear": 0.6037179487179488
+        },
+        "per_intent_f1_std": {
+          "ios_update_issues": 0.16103880180330127,
+          "battery_drain_after_update": 0.1346225206876586,
+          "device_crash_freeze": 0.15688322306420258,
+          "app_malfunction": 0.1837308487799162,
+          "account_access": 0.077405059193479,
+          "unclear": 0.22184466611637668
+        },
+        "folds": [
+          {
+            "accuracy": 0.7647058823529411,
+            "macro_f1": 0.7126262626262626,
+            "per_intent_f1": {
+              "ios_update_issues": 0.8333333333333334,
+              "battery_drain_after_update": 0.9090909090909091,
+              "device_crash_freeze": 0.4,
+              "app_malfunction": 0.4,
+              "account_access": 0.9333333333333333,
+              "unclear": 0.8
+            },
+            "fold": 0
+          },
+          {
+            "accuracy": 0.7058823529411765,
+            "macro_f1": 0.6804869966634671,
+            "per_intent_f1": {
+              "ios_update_issues": 0.7692307692307693,
+              "battery_drain_after_update": 0.7058823529411765,
+              "device_crash_freeze": 0.3333333333333333,
+              "app_malfunction": 0.75,
+              "account_access": 0.9090909090909091,
+              "unclear": 0.6153846153846154
+            },
+            "fold": 1
+          },
+          {
+            "accuracy": 0.7058823529411765,
+            "macro_f1": 0.6598646723646725,
+            "per_intent_f1": {
+              "ios_update_issues": 0.6666666666666666,
+              "battery_drain_after_update": 0.8,
+              "device_crash_freeze": 0.4444444444444444,
+              "app_malfunction": 0.25,
+              "account_access": 0.9230769230769231,
+              "unclear": 0.875
+            },
+            "fold": 2
+          },
+          {
+            "accuracy": 0.4411764705882353,
+            "macro_f1": 0.3888708513708514,
+            "per_intent_f1": {
+              "ios_update_issues": 0.375,
+              "battery_drain_after_update": 0.7142857142857143,
+              "device_crash_freeze": 0.0,
+              "app_malfunction": 0.25,
+              "account_access": 0.7272727272727273,
+              "unclear": 0.26666666666666666
+            },
+            "fold": 3
+          },
+          {
+            "accuracy": 0.5294117647058824,
+            "macro_f1": 0.5105450105450106,
+            "per_intent_f1": {
+              "ios_update_issues": 0.5714285714285714,
+              "battery_drain_after_update": 0.5,
+              "device_crash_freeze": 0.3333333333333333,
+              "app_malfunction": 0.36363636363636365,
+              "account_access": 0.8333333333333334,
+              "unclear": 0.46153846153846156
+            },
+            "fold": 4
+          }
+        ]
+      }
+    },
+    "bge_svm": {
+      "0.5": {
+        "accuracy_mean": 0.6235294117647059,
+        "accuracy_std": 0.08605140493133995,
+        "macro_f1_mean": 0.5490631536219771,
+        "macro_f1_std": 0.09006520593003355,
+        "per_intent_f1_mean": {
+          "ios_update_issues": 0.6493589743589744,
+          "battery_drain_after_update": 0.7414285714285714,
+          "device_crash_freeze": 0.21333333333333332,
+          "app_malfunction": 0.2824242424242424,
+          "account_access": 0.8361344537815126,
+          "unclear": 0.5716993464052288
+        },
+        "per_intent_f1_std": {
+          "ios_update_issues": 0.17432597726984012,
+          "battery_drain_after_update": 0.12538919004280966,
+          "device_crash_freeze": 0.2745501370929867,
+          "app_malfunction": 0.27682046241451624,
+          "account_access": 0.011169412906093478,
+          "unclear": 0.1672006823517941
+        },
+        "folds": [
+          {
+            "accuracy": 0.7647058823529411,
+            "macro_f1": 0.6605455002513826,
+            "per_intent_f1": {
+              "ios_update_issues": 0.9230769230769231,
+              "battery_drain_after_update": 0.8,
+              "device_crash_freeze": 0.0,
+              "app_malfunction": 0.6666666666666666,
+              "account_access": 0.8235294117647058,
+              "unclear": 0.75
+            },
+            "fold": 0
+          },
+          {
+            "accuracy": 0.5882352941176471,
+            "macro_f1": 0.5157407407407407,
+            "per_intent_f1": {
+              "ios_update_issues": 0.6666666666666666,
+              "battery_drain_after_update": 0.75,
+              "device_crash_freeze": 0.4,
+              "app_malfunction": 0.0,
+              "account_access": 0.8333333333333334,
+              "unclear": 0.4444444444444444
+            },
+            "fold": 1
+          },
+          {
+            "accuracy": 0.6470588235294118,
+            "macro_f1": 0.5417175417175417,
+            "per_intent_f1": {
+              "ios_update_issues": 0.6153846153846154,
+              "battery_drain_after_update": 0.8,
+              "device_crash_freeze": 0.0,
+              "app_malfunction": 0.2,
+              "account_access": 0.8571428571428571,
+              "unclear": 0.7777777777777778
+            },
+            "fold": 2
+          },
+          {
+            "accuracy": 0.5,
+            "macro_f1": 0.4030695611577965,
+            "per_intent_f1": {
+              "ios_update_issues": 0.375,
+              "battery_drain_after_update": 0.8571428571428571,
+              "device_crash_freeze": 0.0,
+              "app_malfunction": 0.0,
+              "account_access": 0.8333333333333334,
+              "unclear": 0.35294117647058826
+            },
+            "fold": 3
+          },
+          {
+            "accuracy": 0.6176470588235294,
+            "macro_f1": 0.6242424242424242,
+            "per_intent_f1": {
+              "ios_update_issues": 0.6666666666666666,
+              "battery_drain_after_update": 0.5,
+              "device_crash_freeze": 0.6666666666666666,
+              "app_malfunction": 0.5454545454545454,
+              "account_access": 0.8333333333333334,
+              "unclear": 0.5333333333333333
+            },
+            "fold": 4
+          }
+        ]
+      },
+      "1.0": {
+        "accuracy_mean": 0.6294117647058823,
+        "accuracy_std": 0.09593827311941229,
+        "macro_f1_mean": 0.5641898352192469,
+        "macro_f1_std": 0.08672001778745467,
+        "per_intent_f1_mean": {
+          "ios_update_issues": 0.6405677655677656,
+          "battery_drain_after_update": 0.7762414056531703,
+          "device_crash_freeze": 0.2333333333333333,
+          "app_malfunction": 0.3395670995670995,
+          "account_access": 0.8281091457562045,
+          "unclear": 0.5673202614379085
+        },
+        "per_intent_f1_std": {
+          "ios_update_issues": 0.17690686568279215,
+          "battery_drain_after_update": 0.1569093601262934,
+          "device_crash_freeze": 0.2905932629027116,
+          "app_malfunction": 0.23961163707993446,
+          "account_access": 0.062068382058706004,
+          "unclear": 0.164651926010178
+        },
+        "folds": [
+          {
+            "accuracy": 0.7941176470588235,
+            "macro_f1": 0.687060651766534,
+            "per_intent_f1": {
+              "ios_update_issues": 0.9230769230769231,
+              "battery_drain_after_update": 0.9090909090909091,
+              "device_crash_freeze": 0.0,
+              "app_malfunction": 0.6666666666666666,
+              "account_access": 0.8235294117647058,
+              "unclear": 0.8
+            },
+            "fold": 0
+          },
+          {
+            "accuracy": 0.5882352941176471,
+            "macro_f1": 0.5250544662309369,
+            "per_intent_f1": {
+              "ios_update_issues": 0.6666666666666666,
+              "battery_drain_after_update": 0.7058823529411765,
+              "device_crash_freeze": 0.5,
+              "app_malfunction": 0.0,
+              "account_access": 0.8333333333333334,
+              "unclear": 0.4444444444444444
+            },
+            "fold": 1
+          },
+          {
+            "accuracy": 0.6470588235294118,
+            "macro_f1": 0.5515797927562633,
+            "per_intent_f1": {
+              "ios_update_issues": 0.5714285714285714,
+              "battery_drain_after_update": 0.9090909090909091,
+              "device_crash_freeze": 0.0,
+              "app_malfunction": 0.2,
+              "account_access": 0.9230769230769231,
+              "unclear": 0.7058823529411765
+            },
+            "fold": 2
+          },
+          {
+            "accuracy": 0.5,
+            "macro_f1": 0.43301184110007634,
+            "per_intent_f1": {
+              "ios_update_issues": 0.375,
+              "battery_drain_after_update": 0.8571428571428571,
+              "device_crash_freeze": 0.0,
+              "app_malfunction": 0.2857142857142857,
+              "account_access": 0.7272727272727273,
+              "unclear": 0.35294117647058826
+            },
+            "fold": 3
+          },
+          {
+            "accuracy": 0.6176470588235294,
+            "macro_f1": 0.6242424242424242,
+            "per_intent_f1": {
+              "ios_update_issues": 0.6666666666666666,
+              "battery_drain_after_update": 0.5,
+              "device_crash_freeze": 0.6666666666666666,
+              "app_malfunction": 0.5454545454545454,
+              "account_access": 0.8333333333333334,
+              "unclear": 0.5333333333333333
+            },
+            "fold": 4
+          }
+        ]
+      },
+      "2.0": {
+        "accuracy_mean": 0.611764705882353,
+        "accuracy_std": 0.0819316957481419,
+        "macro_f1_mean": 0.5607501757501757,
+        "macro_f1_std": 0.08027084759052788,
+        "per_intent_f1_mean": {
+          "ios_update_issues": 0.5819780219780221,
+          "battery_drain_after_update": 0.7544232238349886,
+          "device_crash_freeze": 0.3333333333333333,
+          "app_malfunction": 0.31587301587301586,
+          "account_access": 0.8281091457562045,
+          "unclear": 0.5507843137254902
+        },
+        "per_intent_f1_std": {
+          "ios_update_issues": 0.18548640388768137,
+          "battery_drain_after_update": 0.14397086610050067,
+          "device_crash_freeze": 0.27888667551135854,
+          "app_malfunction": 0.2042876259453482,
+          "account_access": 0.062068382058706004,
+          "unclear": 0.1463806585358433
+        },
+        "folds": [
+          {
+            "accuracy": 0.7058823529411765,
+            "macro_f1": 0.6051425698484522,
+            "per_intent_f1": {
+              "ios_update_issues": 0.7692307692307693,
+              "battery_drain_after_update": 0.8,
+              "device_crash_freeze": 0.0,
+              "app_malfunction": 0.5714285714285714,
+              "account_access": 0.8235294117647058,
+              "unclear": 0.6666666666666666
+            },
+            "fold": 0
+          },
+          {
+            "accuracy": 0.6176470588235294,
+            "macro_f1": 0.5465057817998995,
+            "per_intent_f1": {
+              "ios_update_issues": 0.7692307692307693,
+              "battery_drain_after_update": 0.7058823529411765,
+              "device_crash_freeze": 0.5,
+              "app_malfunction": 0.0,
+              "account_access": 0.8333333333333334,
+              "unclear": 0.47058823529411764
+            },
+            "fold": 1
+          },
+          {
+            "accuracy": 0.6764705882352942,
+            "macro_f1": 0.6396205646205647,
+            "per_intent_f1": {
+              "ios_update_issues": 0.5333333333333333,
+              "battery_drain_after_update": 0.9090909090909091,
+              "device_crash_freeze": 0.5,
+              "app_malfunction": 0.2222222222222222,
+              "account_access": 0.9230769230769231,
+              "unclear": 0.75
+            },
+            "fold": 2
+          },
+          {
+            "accuracy": 0.47058823529411764,
+            "macro_f1": 0.41168831168831166,
+            "per_intent_f1": {
+              "ios_update_issues": 0.26666666666666666,
+              "battery_drain_after_update": 0.8571428571428571,
+              "device_crash_freeze": 0.0,
+              "app_malfunction": 0.2857142857142857,
+              "account_access": 0.7272727272727273,
+              "unclear": 0.3333333333333333
+            },
+            "fold": 3
+          },
+          {
+            "accuracy": 0.5882352941176471,
+            "macro_f1": 0.6007936507936508,
+            "per_intent_f1": {
+              "ios_update_issues": 0.5714285714285714,
+              "battery_drain_after_update": 0.5,
+              "device_crash_freeze": 0.6666666666666666,
+              "app_malfunction": 0.5,
+              "account_access": 0.8333333333333334,
+              "unclear": 0.5333333333333333
+            },
+            "fold": 4
+          }
+        ]
+      }
+    }
+  },
+  "selection": {
+    "winner": "bge_lr",
+    "C": "2.0",
+    "macro_f1_mean": 0.5951877534230475
+  }
+}

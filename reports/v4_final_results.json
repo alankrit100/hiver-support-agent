@@ -1,0 +1,429 @@
+{
+  "protocol": {
+    "model": "bge_lr",
+    "C": 2.0,
+    "fit_on": "dev-170 (all)",
+    "evaluated_on": "frozen test-45 (once)",
+    "input": "text field only",
+    "cv_macro_f1_mean": 0.5951877534230475
+  },
+  "accuracy": 0.5777777777777777,
+  "macro_f1": 0.5411690433749258,
+  "correct": 26,
+  "total": 45,
+  "per_intent": {
+    "ios_update_issues": {
+      "precision": 0.375,
+      "recall": 0.375,
+      "f1": 0.375,
+      "support": 8
+    },
+    "battery_drain_after_update": {
+      "precision": 0.7777777777777778,
+      "recall": 0.875,
+      "f1": 0.8235294117647058,
+      "support": 8
+    },
+    "device_crash_freeze": {
+      "precision": 0.3333333333333333,
+      "recall": 0.5,
+      "f1": 0.4,
+      "support": 4
+    },
+    "app_malfunction": {
+      "precision": 0.25,
+      "recall": 0.14285714285714285,
+      "f1": 0.18181818181818182,
+      "support": 7
+    },
+    "account_access": {
+      "precision": 0.8571428571428571,
+      "recall": 0.75,
+      "f1": 0.8,
+      "support": 8
+    },
+    "unclear": {
+      "precision": 0.6363636363636364,
+      "recall": 0.7,
+      "f1": 0.6666666666666666,
+      "support": 10
+    }
+  },
+  "confusion_matrix": {
+    "labels": [
+      "ios_update_issues",
+      "battery_drain_after_update",
+      "device_crash_freeze",
+      "app_malfunction",
+      "account_access",
+      "unclear"
+    ],
+    "matrix": [
+      [
+        3,
+        1,
+        1,
+        1,
+        0,
+        2
+      ],
+      [
+        1,
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        2,
+        1,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        1,
+        1,
+        1,
+        2
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        6,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        0,
+        0,
+        7
+      ]
+    ]
+  },
+  "examples": [
+    {
+      "tweet_id": 1143580,
+      "true_intent": "app_malfunction",
+      "pred_intent": "unclear",
+      "confidence": 0.23561975359916687,
+      "correct": false
+    },
+    {
+      "tweet_id": 1120569,
+      "true_intent": "ios_update_issues",
+      "pred_intent": "ios_update_issues",
+      "confidence": 0.3777002990245819,
+      "correct": true
+    },
+    {
+      "tweet_id": 2280563,
+      "true_intent": "unclear",
+      "pred_intent": "ios_update_issues",
+      "confidence": 0.3435819149017334,
+      "correct": false
+    },
+    {
+      "tweet_id": 945681,
+      "true_intent": "ios_update_issues",
+      "pred_intent": "unclear",
+      "confidence": 0.3126146197319031,
+      "correct": false
+    },
+    {
+      "tweet_id": 2111438,
+      "true_intent": "unclear",
+      "pred_intent": "unclear",
+      "confidence": 0.4512244462966919,
+      "correct": true
+    },
+    {
+      "tweet_id": 391226,
+      "true_intent": "account_access",
+      "pred_intent": "account_access",
+      "confidence": 0.44985705614089966,
+      "correct": true
+    },
+    {
+      "tweet_id": 584838,
+      "true_intent": "unclear",
+      "pred_intent": "device_crash_freeze",
+      "confidence": 0.2218613475561142,
+      "correct": false
+    },
+    {
+      "tweet_id": 2432830,
+      "true_intent": "device_crash_freeze",
+      "pred_intent": "device_crash_freeze",
+      "confidence": 0.3811842203140259,
+      "correct": true
+    },
+    {
+      "tweet_id": 1850502,
+      "true_intent": "battery_drain_after_update",
+      "pred_intent": "battery_drain_after_update",
+      "confidence": 0.4119156301021576,
+      "correct": true
+    },
+    {
+      "tweet_id": 2261525,
+      "true_intent": "app_malfunction",
+      "pred_intent": "app_malfunction",
+      "confidence": 0.3327574133872986,
+      "correct": true
+    },
+    {
+      "tweet_id": 1618310,
+      "true_intent": "unclear",
+      "pred_intent": "unclear",
+      "confidence": 0.4871279299259186,
+      "correct": true
+    },
+    {
+      "tweet_id": 2816381,
+      "true_intent": "account_access",
+      "pred_intent": "account_access",
+      "confidence": 0.5737707614898682,
+      "correct": true
+    },
+    {
+      "tweet_id": 488005,
+      "true_intent": "device_crash_freeze",
+      "pred_intent": "device_crash_freeze",
+      "confidence": 0.2847416400909424,
+      "correct": true
+    },
+    {
+      "tweet_id": 1181715,
+      "true_intent": "battery_drain_after_update",
+      "pred_intent": "battery_drain_after_update",
+      "confidence": 0.2951430678367615,
+      "correct": true
+    },
+    {
+      "tweet_id": 2041687,
+      "true_intent": "app_malfunction",
+      "pred_intent": "ios_update_issues",
+      "confidence": 0.34536439180374146,
+      "correct": false
+    },
+    {
+      "tweet_id": 864002,
+      "true_intent": "account_access",
+      "pred_intent": "app_malfunction",
+      "confidence": 0.24440991878509521,
+      "correct": false
+    },
+    {
+      "tweet_id": 817662,
+      "true_intent": "app_malfunction",
+      "pred_intent": "account_access",
+      "confidence": 0.42093461751937866,
+      "correct": false
+    },
+    {
+      "tweet_id": 208223,
+      "true_intent": "device_crash_freeze",
+      "pred_intent": "ios_update_issues",
+      "confidence": 0.30570515990257263,
+      "correct": false
+    },
+    {
+      "tweet_id": 1866210,
+      "true_intent": "app_malfunction",
+      "pred_intent": "device_crash_freeze",
+      "confidence": 0.20822936296463013,
+      "correct": false
+    },
+    {
+      "tweet_id": 1301303,
+      "true_intent": "unclear",
+      "pred_intent": "unclear",
+      "confidence": 0.37035268545150757,
+      "correct": true
+    },
+    {
+      "tweet_id": 2149185,
+      "true_intent": "ios_update_issues",
+      "pred_intent": "ios_update_issues",
+      "confidence": 0.2916596233844757,
+      "correct": true
+    },
+    {
+      "tweet_id": 211223,
+      "true_intent": "account_access",
+      "pred_intent": "account_access",
+      "confidence": 0.2339324802160263,
+      "correct": true
+    },
+    {
+      "tweet_id": 810825,
+      "true_intent": "ios_update_issues",
+      "pred_intent": "battery_drain_after_update",
+      "confidence": 0.29491421580314636,
+      "correct": false
+    },
+    {
+      "tweet_id": 1101064,
+      "true_intent": "battery_drain_after_update",
+      "pred_intent": "battery_drain_after_update",
+      "confidence": 0.5579976439476013,
+      "correct": true
+    },
+    {
+      "tweet_id": 926419,
+      "true_intent": "account_access",
+      "pred_intent": "account_access",
+      "confidence": 0.6000072956085205,
+      "correct": true
+    },
+    {
+      "tweet_id": 370354,
+      "true_intent": "account_access",
+      "pred_intent": "device_crash_freeze",
+      "confidence": 0.23827172815799713,
+      "correct": false
+    },
+    {
+      "tweet_id": 2468124,
+      "true_intent": "device_crash_freeze",
+      "pred_intent": "app_malfunction",
+      "confidence": 0.2350713014602661,
+      "correct": false
+    },
+    {
+      "tweet_id": 248194,
+      "true_intent": "battery_drain_after_update",
+      "pred_intent": "battery_drain_after_update",
+      "confidence": 0.2778478264808655,
+      "correct": true
+    },
+    {
+      "tweet_id": 2711855,
+      "true_intent": "unclear",
+      "pred_intent": "unclear",
+      "confidence": 0.29009342193603516,
+      "correct": true
+    },
+    {
+      "tweet_id": 2128225,
+      "true_intent": "app_malfunction",
+      "pred_intent": "unclear",
+      "confidence": 0.25350311398506165,
+      "correct": false
+    },
+    {
+      "tweet_id": 1489603,
+      "true_intent": "account_access",
+      "pred_intent": "account_access",
+      "confidence": 0.63893723487854,
+      "correct": true
+    },
+    {
+      "tweet_id": 1756091,
+      "true_intent": "battery_drain_after_update",
+      "pred_intent": "battery_drain_after_update",
+      "confidence": 0.5176652073860168,
+      "correct": true
+    },
+    {
+      "tweet_id": 2710974,
+      "true_intent": "unclear",
+      "pred_intent": "unclear",
+      "confidence": 0.3325434625148773,
+      "correct": true
+    },
+    {
+      "tweet_id": 1759674,
+      "true_intent": "account_access",
+      "pred_intent": "account_access",
+      "confidence": 0.3622238337993622,
+      "correct": true
+    },
+    {
+      "tweet_id": 2425834,
+      "true_intent": "unclear",
+      "pred_intent": "unclear",
+      "confidence": 0.3384633958339691,
+      "correct": true
+    },
+    {
+      "tweet_id": 2869719,
+      "true_intent": "app_malfunction",
+      "pred_intent": "ios_update_issues",
+      "confidence": 0.19071367383003235,
+      "correct": false
+    },
+    {
+      "tweet_id": 1772596,
+      "true_intent": "ios_update_issues",
+      "pred_intent": "ios_update_issues",
+      "confidence": 0.3499526381492615,
+      "correct": true
+    },
+    {
+      "tweet_id": 1334356,
+      "true_intent": "ios_update_issues",
+      "pred_intent": "app_malfunction",
+      "confidence": 0.2454097867012024,
+      "correct": false
+    },
+    {
+      "tweet_id": 207997,
+      "true_intent": "unclear",
+      "pred_intent": "battery_drain_after_update",
+      "confidence": 0.2289663404226303,
+      "correct": false
+    },
+    {
+      "tweet_id": 1748798,
+      "true_intent": "battery_drain_after_update",
+      "pred_intent": "battery_drain_after_update",
+      "confidence": 0.34117037057876587,
+      "correct": true
+    },
+    {
+      "tweet_id": 2422589,
+      "true_intent": "ios_update_issues",
+      "pred_intent": "unclear",
+      "confidence": 0.22980812191963196,
+      "correct": false
+    },
+    {
+      "tweet_id": 601372,
+      "true_intent": "ios_update_issues",
+      "pred_intent": "device_crash_freeze",
+      "confidence": 0.21691924333572388,
+      "correct": false
+    },
+    {
+      "tweet_id": 2287894,
+      "true_intent": "unclear",
+      "pred_intent": "unclear",
+      "confidence": 0.4564034044742584,
+      "correct": true
+    },
+    {
+      "tweet_id": 1476950,
+      "true_intent": "battery_drain_after_update",
+      "pred_intent": "ios_update_issues",
+      "confidence": 0.39927732944488525,
+      "correct": false
+    },
+    {
+      "tweet_id": 2890701,
+      "true_intent": "battery_drain_after_update",
+      "pred_intent": "battery_drain_after_update",
+      "confidence": 0.4193612039089203,
+      "correct": true
+    }
+  ]
+}
