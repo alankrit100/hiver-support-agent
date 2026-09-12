@@ -154,20 +154,16 @@ The ensemble misclassifies 14/45 (31%) on the frozen test set. Real examples fro
 
 ## What is Misleading About My Headline Number?
 
-**[HUMAN]** — *This section needs to be genuinely self-critical, not performative. Edit freely, but the honest material below is real, not invented.*
+**[HUMAN]** — *edit freely, but everything below actually happened, nothing's made up.*
 
-**Draft:**
-The headline "68.9% accuracy / 0.691 macro F1" (ensemble, frozen test-45) is misleading in several concrete ways:
+The 68.9% accuracy number sounds solid. It isn't as strong as it looks:
 
-1. **n=45 is small.** 2-3 examples flipping either way moves accuracy by 4-7 points. Treat the exact number as noisy, not precise.
-2. **The ensemble's gain over the classifier alone (57.8% → 68.9%) depends on a live API responding well at eval time, and the reported "clean" run isn't perfectly clean either.** During development, a Sarvam credit outage caused 36/45 few-shot predictions to silently degrade to `unclear`/0.0 confidence, producing a corrupted run scoring 62.2% acc / 0.599 macro F1 — actually *lower* than the real result, not higher, since defaulting everything to `unclear` undershoots on the many non-`unclear` test examples. I caught it and re-ran with fresh credits, but even that re-run — the one behind the reported 68.9%/0.691 — has 2 of 45 Sarvam calls that still failed transiently (`tweet_id` 2111438 and 601372, both fell back to `unclear`/0.0 confidence). One (2111438) happened to be classified correctly anyway via the `bge_lr` component; the other (601372) was a genuine error. So the reported number is sensitive to external API flakiness by roughly ±2 percentage points even on the run I'm reporting — a real fragility, not a one-off I fully eliminated.
-3. **Reply-quality numbers used a different LLM backend (Groq) than the classifier's few-shot component (Sarvam).** The system isn't running on one consistent model end-to-end when these headline numbers were produced — worth being explicit about rather than letting it look like a single coherent stack.
-4. **The human-vs-LLM-judge agreement check has limited statistical power.** The human rater's scores clustered near the ceiling (little variance across 25 examples), which makes the correlation numbers close to uninformative. I can say the two evaluators visibly *disagree* on groundedness specifically, but I can't make a strong quantitative claim about "how much" they agree overall from this sample.
-5. **Retrieval draws from only 100 historical threads, and the pool is badly skewed.** Of those 100, 53 are labeled `unclear` by the same classifier used for intent-constrained retrieval, leaving only 4 `device_crash_freeze` and 4 `app_malfunction` threads for the intent filter to search within on those classes. Intent-constrained retrieval barely has room to operate for the smaller intents — "grounded in historical resolutions" is only as good as this small, imbalanced sample.
-6. **The escalation confidence threshold (0.4) was never re-validated against the ensemble's actual confidence scale.** It's an inherited value from earlier iterations, not something recalibrated after the ensemble changed what "confidence" numerically means. On the frozen test-45, ensemble confidences range from 0.21 to 0.70, with 17/45 (38%) below 0.4 — a substantial share of the ~44% overall escalation rate is this one uncalibrated threshold doing the work, not a deliberately chosen operating point.
-7. **The classifier's raw accuracy isn't what a customer would actually receive.** ~44% of messages get escalated (partly correct-but-low-confidence, partly genuinely wrong), so the real customer-facing behavior is a mix of auto-handled replies and human handoffs — the 68.9% number describes the classifier alone, not the deployed experience.
+1. **The test set is only 45 messages.** Two or three examples going the other way and the number moves 4-7 points. This isn't a precise measurement, it's a rough one.
+2. **Even my "clean" run wasn't fully clean.** 2 of the 45 predictions still failed silently mid-run. One got lucky and was right anyway, the other wasn't. So the number I'm reporting is already a couple points shakier than it looks on paper.
+3. **Two different AI models are behind these results, not one.** One model classifies the message, a different one writes and judges the reply. It's not a single consistent system end to end, and I'd rather say that up front than let it look tidier than it is.
+4. **This number describes the classifier, not what a customer gets.** About 44% of messages get sent to a human instead of auto-answered. So "68.9% accurate" doesn't mean "68.9% of customers get a good reply automatically" — it's one input into a bigger decision, not the whole outcome.
 
-The REAL story: the system is honestly better than the pre-ensemble baseline and better than the historical-reply baseline on reply quality, but every one of those comparisons rests on a small sample and a live third-party API whose reliability visibly fluctuated during this project.
+Bottom line: it's a real improvement over the earlier baselines, but it's a small, somewhat fragile number, not a settled fact.
 
 ---
 
@@ -178,8 +174,9 @@ With one more week:
 1. **More labeled data.** 170 dev examples is the real ceiling on classification accuracy — more data would likely help more than further model tuning.
 2. **Re-validate the LLM judge with a more differentiated human sample.** Redo the blind scoring pass deliberately trying to spread across the 1-5 range where quality genuinely differs, to get a statistically meaningful agreement number instead of a near-ceiling one.
 3. **Decouple backend choice from headline numbers.** Run classification and reply generation on the same LLM backend for one clean, internally consistent report, and add automatic backend failover (Sarvam → Groq) so a single provider outage can't silently degrade results the way it did during development.
-4. **Grow the retrieval pool** beyond 100 threads, especially for the smaller intent classes.
-5. **Deploy monitoring:** track real-world classifier confidence, escalation rate, and reply-groundedness over time rather than relying on one-shot evaluation snapshots.
+4. **Grow the retrieval pool** beyond 100 threads — right now over half of it is `unclear`, leaving only ~4 examples each for the smaller intents like `device_crash_freeze` and `app_malfunction`. Barely enough to search within.
+5. **Recheck the escalation threshold.** The 0.4 confidence cutoff is inherited from an earlier version of the system and was never re-tuned for how the current ensemble's confidence scores actually spread out (0.21-0.70 on the test set). It's probably doing more work than it should.
+6. **Deploy monitoring:** track real-world classifier confidence, escalation rate, and reply-groundedness over time rather than relying on one-shot evaluation snapshots.
 
 ---
 
